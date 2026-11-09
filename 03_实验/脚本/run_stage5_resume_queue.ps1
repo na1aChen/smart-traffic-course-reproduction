@@ -32,6 +32,8 @@ for ($index = $startIndex; $index -lt $experiments.Count; $index++) {
     $evalSummary = Join-Path $projectRoot "01_立项\阶段5_证据\evaluation\$experiment.json"
     $expRoot = Join-Path $projectRoot "03_实验\robustness\$experiment"
     $lastCheckpoint = Join-Path $expRoot 'train\weights\last.pt'
+    $backupCheckpoint = Get-ChildItem -LiteralPath (Join-Path $expRoot 'train\weights\backup') -Filter '*.pt' -ErrorAction SilentlyContinue |
+        Select-Object -First 1
 
     $queue.status = 'running'
     $queue.current_experiment = $experiment
@@ -44,7 +46,7 @@ for ($index = $startIndex; $index -lt $experiments.Count; $index++) {
         $trainPassed = ((Get-Content -LiteralPath $trainSummary -Raw | ConvertFrom-Json).status -eq 'passed')
     }
     if (-not $trainPassed) {
-        if (Test-Path -LiteralPath $lastCheckpoint) {
+        if ((Test-Path -LiteralPath $lastCheckpoint) -or $null -ne $backupCheckpoint) {
             & $python $runner resume --experiment $experiment 2>&1 |
                 Tee-Object -FilePath (Join-Path $logRoot "$experiment`_resume.log")
             if ($LASTEXITCODE -ne 0) {

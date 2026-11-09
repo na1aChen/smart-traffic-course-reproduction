@@ -31,7 +31,9 @@ while ($true) {
             continue
         }
 
-        $experiment = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $checkpoint.FullName))
+        $experiment = Split-Path -Leaf (
+            Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $checkpoint.FullName))
+        )
         $backupRoot = Join-Path $checkpoint.DirectoryName 'backup'
         New-Item -ItemType Directory -Force -Path $backupRoot | Out-Null
         $name = '{0}_{1}.pt' -f $experiment, $checkpoint.LastWriteTimeUtc.ToString('yyyyMMdd_HHmmss')
