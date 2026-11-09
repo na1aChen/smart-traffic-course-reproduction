@@ -1,0 +1,26 @@
+experiment_id: BASELINE-002-S2027
+stage: 5
+purpose: 基线第二个随机种子，用于估计训练波动
+dataset_version: TT100K-2016-type45-stage1
+split_manifest: D:/文档/2026秋季/智能加交通/大作业2/项目/03_实验/datasets/TT100K/yolo/manifests/split_manifest.json
+architecture_yaml: D:/文档/2026秋季/智能加交通/大作业2/项目/02_代码/阶段4/configs/yolov10n-45.yaml
+initial_weights: D:/文档/2026秋季/智能加交通/大作业2/项目/02_代码/权重/yolov10n.pt
+single_factor: seed_only
+seed: 2027
+imgsz: 640
+batch: 8
+epochs: 40
+device: 0
+workers: 0
+optimizer: SGD
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+nbs: 64
+patience: 10
+amp: true
+deterministic: true
+close_mosaic: 5
+test_policy: 训练和验证完成并冻结 best.pt 后，测试集只评估一次
