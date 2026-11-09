@@ -243,6 +243,151 @@ def train_experiment(experiment_id: str) -> int:
     return 0 if summary["status"] == "passed" else 1
 
 
+def find_resume_checkpoint(experiment_id: str) -> tuple[Path, list[dict[str, str]]]:
+    weights_dir = RUN_ROOT / experiment_id / "train" / "weights"
+    preferred = weights_dir / "last.pt"
+    backup_dir = weights_dir / "backup"
+    candidates = [preferred]
+    if backup_dir.is_dir():
+        candidates.extend(
+            sorted(
+                backup_dir.glob("*.pt"),
+                key=lambda path: path.stat().st_mtime,
+                reverse=True,
+            )
+        )
+    failures: list[dict[str, str]] = []
+    for candidate in candidates:
+        if not candidate.is_file():
+            continue
+        try:
+            torch.load(candidate, map_location="cpu")
+        except Exception as exc:  # noqa: BLE001
+            failures.append(
+                {"path": str(candidate), "error": f"{type(exc).__name__}: {exc}"}
+            )
+            continue
+        return candidate, failures
+    raise FileNotFoundError(
+        f"No loadable checkpoint for {experiment_id} in {weights_dir}"
+    )
+
+
+def resume_experiment(experiment_id: str) -> int:
+    config, variant = load_experiment(experiment_id)
+    exp_root = RUN_ROOT / experiment_id
+    summary_path = EVIDENCE_ROOT / "training" / f"{experiment_id}.json"
+    status_path = LOG_ROOT / experiment_id / "status.json"
+    if summary_path.is_file():
+        existing = json.loads(summary_path.read_text(encoding="utf-8"))
+        if existing.get("status") == "passed":
+            print(f"Training already complete: {summary_path}")
+            return 0
+    checkpoint, rejected_checkpoints = find_resume_checkpoint(experiment_id)
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    summary: dict[str, Any] = {
+        "created_at": utc_now(),
+        "experiment_id": experiment_id,
+        "config": str(EXPERIMENTS[experiment_id]["config"]),
+        "variant": variant,
+        "mode": "resume",
+        "checkpoint": str(checkpoint),
+        "rejected_checkpoints": rejected_checkpoints,
+        "status": "running",
+        "test_inference_run": False,
+    }
+    write_json(
+        status_path,
+        {
+            "experiment_id": experiment_id,
+            "status": "training",
+            "mode": "resume",
+            "started_at": summary["created_at"],
+        },
+    )
+    try:
+        set_reproducibility(int(config["seed"]))
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.reset_peak_memory_stats()
+        model = YOLOv10(str(checkpoint))
+        memory_state = register_memory_callbacks(model)
+        losses: list[float] = []
+
+        def on_train_batch_end(trainer) -> None:
+            if getattr(trainer, "loss_items", None) is not None:
+                losses.extend(float(value) for value in trainer.loss_items)
+
+        model.add_callback("on_train_batch_end", on_train_batch_end)
+        model.train(resume=True)
+        results_csv = exp_root / "train" / "results.csv"
+        rows = result_rows(results_csv)
+        best = (
+            max(
+                rows,
+                key=lambda row: float(row["metrics/mAP50-95(B)"])
+                + 0.1 * float(row["metrics/mAP50(B)"]),
+            )
+            if rows
+            else None
+        )
+        finite = all(math.isfinite(loss) for loss in losses)
+        best_checkpoint = exp_root / "train" / "weights" / "best.pt"
+        last_checkpoint = exp_root / "train" / "weights" / "last.pt"
+        summary.update(memory_state)
+        summary.update(
+            {
+                "status": "passed"
+                if finite
+                and rows
+                and best_checkpoint.is_file()
+                and last_checkpoint.is_file()
+                else "failed",
+                "completed_epochs": len(rows),
+                "best_epoch": int(best["epoch"]) if best else None,
+                "best_validation": (
+                    {
+                        "precision": float(best["metrics/precision(B)"]),
+                        "recall": float(best["metrics/recall(B)"]),
+                        "map50": float(best["metrics/mAP50(B)"]),
+                        "map50_95": float(best["metrics/mAP50-95(B)"]),
+                    }
+                    if best
+                    else None
+                ),
+                "losses_finite": finite,
+                "results_csv": str(results_csv),
+                "best_checkpoint": str(best_checkpoint),
+                "last_checkpoint": str(last_checkpoint),
+                "peak_memory_allocated_gib": round(
+                    memory_state.get("max_memory_allocated_bytes", 0) / 1024**3,
+                    4,
+                ),
+                "peak_memory_reserved_gib": round(
+                    memory_state.get("max_memory_reserved_bytes", 0) / 1024**3,
+                    4,
+                ),
+            }
+        )
+    except Exception as exc:  # noqa: BLE001
+        summary.update(
+            {"status": "failed", "error": f"{type(exc).__name__}: {exc}"}
+        )
+    summary["finished_at"] = utc_now()
+    write_json(summary_path, summary)
+    write_json(
+        status_path,
+        {
+            "experiment_id": experiment_id,
+            "status": "train_passed" if summary["status"] == "passed" else "failed",
+            "training_summary": str(summary_path),
+            "finished_at": summary["finished_at"],
+        },
+    )
+    print(f"Stage 5 resumed training summary: {summary_path}")
+    return 0 if summary["status"] == "passed" else 1
+
+
 def evaluate_experiment(experiment_id: str) -> int:
     config, _ = load_experiment(experiment_id)
     exp_root = RUN_ROOT / experiment_id
@@ -327,11 +472,13 @@ def evaluate_experiment(experiment_id: str) -> int:
 def main() -> int:
     install_unicode_path_save_patch()
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=("train", "evaluate"))
+    parser.add_argument("command", choices=("train", "resume", "evaluate"))
     parser.add_argument("--experiment", choices=tuple(EXPERIMENTS), required=True)
     args = parser.parse_args()
     if args.command == "train":
         return train_experiment(args.experiment)
+    if args.command == "resume":
+        return resume_experiment(args.experiment)
     return evaluate_experiment(args.experiment)
 
 
