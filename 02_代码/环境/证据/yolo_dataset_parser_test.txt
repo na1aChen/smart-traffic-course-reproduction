@@ -1,0 +1,1 @@
+dataset_parser_ok 45 <PROJECT_ROOT>\03_实验\datasets\TT100K\yolo\images\train <PROJECT_ROOT>\03_实验\datasets\TT100K\yolo\images\val <PROJECT_ROOT>\03_实验\datasets\TT100K\yolo\images\test

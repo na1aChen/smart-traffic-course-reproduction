@@ -1,0 +1,36 @@
+{
+  "train_test_id_overlap": [
+    {
+      "image_id": "35542",
+      "image_sha256": "001e8c71b0ce1bf8a685914a906f597e662d759a1bda9f37ea3aad8a1a39c494",
+      "reason": "official train/test id overlap; kept in test only"
+    },
+    {
+      "image_id": "62778",
+      "image_sha256": "b98331efad3527a960ec167b9da50cbf70970bf670ed97b6043ae51151426147",
+      "reason": "official train/test id overlap; kept in test only"
+    },
+    {
+      "image_id": "78585",
+      "image_sha256": "f153595f19da30a989d750ce91b0ca369fed427f80a0f7a53b2c730dde677f84",
+      "reason": "official train/test id overlap; kept in test only"
+    },
+    {
+      "image_id": "79029",
+      "image_sha256": "66a8f7fa239720c7d3dfdee323695c7a09215100db9bacfe36e2e0db340c1b28",
+      "reason": "official train/test id overlap; kept in test only"
+    },
+    {
+      "image_id": "88586",
+      "image_sha256": "0e8a7b92f8c03b60ef44f31a6e2f1913f820e1b29e2f390a8abcfbf6a7ee4bd7",
+      "reason": "official train/test id overlap; kept in test only"
+    },
+    {
+      "image_id": "90422",
+      "image_sha256": "fec8e3f6ef677e596ac0434d61b45c668c6e2c30197c216848bfd68d64277586",
+      "reason": "official train/test id overlap; kept in test only"
+    }
+  ],
+  "train_test_content_overlap": [],
+  "test_internal_sha256_duplicates": []
+}

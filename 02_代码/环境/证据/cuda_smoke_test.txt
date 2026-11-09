@@ -1,0 +1,13 @@
+python=3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+executable=<PROJECT_ROOT>\02_代码\环境\venv\Scripts\python.exe
+platform=Windows-10-10.0.26100-SP0
+torch=2.0.1+cu118
+torchvision=0.15.2+cu118
+cuda_build=11.8
+cudnn=8700
+cuda_available=True
+device_count=1
+device_name=NVIDIA GeForce RTX 4060 Laptop GPU
+capability=(8, 9)
+matmul_ok=(1024, 1024)
+max_memory_allocated=16908288

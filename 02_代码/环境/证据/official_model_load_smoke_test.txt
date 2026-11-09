@@ -1,0 +1,6 @@
+Loading weights from local directory
+model_class=YOLOv10DetectionModel
+classes=80
+parameters=2775520
+device=cuda:0
+cuda_available=True

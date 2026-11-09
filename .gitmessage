@@ -1,0 +1,9 @@
+<type>(<scope>): <summary>
+
+# Types: stage, exp, feat, fix, docs, chore, test
+# Examples:
+#   stage5: add robustness design
+#   exp(P2-001): archive final metrics
+#   docs: update stage gate
+#
+# Every completed stage must include its Chinese summary and evidence paths.

@@ -1,0 +1,24 @@
+{
+  "data_root": "<PROJECT_ROOT>\\03_实验\\datasets\\TT100K\\extracted\\data",
+  "output_root": "<PROJECT_ROOT>\\03_实验\\datasets\\TT100K\\yolo",
+  "annotation_path": "<PROJECT_ROOT>\\03_实验\\datasets\\TT100K\\extracted\\data\\annotations.json",
+  "annotation_sha256": "8479d18bfe1a5073b37704b827703f65cd48ada4b4487b9ab3bbd239484323be",
+  "official_train_ids": 6105,
+  "official_test_images": 3071,
+  "derived_val_images": 610,
+  "derived_train_images": 5489,
+  "removed_train_ids_due_to_test_overlap": 6,
+  "removed_train_images_due_to_exact_content_overlap": 0,
+  "val_fraction": 0.1,
+  "seed": 2026,
+  "classes": 45,
+  "selected_boxes": {
+    "train": 13923,
+    "val": 1553,
+    "test": 7706
+  },
+  "link_mode": "hardlink",
+  "archive_path": "<PROJECT_ROOT>\\03_实验\\datasets\\TT100K\\raw\\data.zip",
+  "archive_size_bytes": 19152969603,
+  "archive_sha256": "0D9F199A222417A849C108DAE8FE991DC0C9384B26FDC61953C798455F7774DA"
+}

@@ -1,0 +1,37 @@
+Sat Nov  7 20:06:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.79                 Driver Version: 595.79         CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0  On |                  N/A |
+| N/A   57C    P3             17W /  140W |    1296MiB /   8188MiB |     11%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4160    C+G   ..._cw5n1h2txyewy\SearchHost.exe      N/A      |
+|    0   N/A  N/A            7672    C+G   ...ram Files\Tencent\QQNT\QQ.exe      N/A      |
+|    0   N/A  N/A            9824    C+G   ...xyewy\ShellExperienceHost.exe      N/A      |
+|    0   N/A  N/A           10692    C+G   C:\Windows\explorer.exe               N/A      |
+|    0   N/A  N/A           10800    C+G   ...indows\System32\ShellHost.exe      N/A      |
+|    0   N/A  N/A           11272    C+G   ....0.4314.58\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A           12300    C+G   ...y\StartMenuExperienceHost.exe      N/A      |
+|    0   N/A  N/A           16840    C+G   ....0.4314.58\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A           17332    C+G   ...em32\ApplicationFrameHost.exe      N/A      |
+|    0   N/A  N/A           19332    C+G   ...esyd8\GamingCenter3_Cross.exe      N/A      |
+|    0   N/A  N/A           22404    C+G   ....0.4314.58\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A           23336    C+G   ...5n1h2txyewy\TextInputHost.exe      N/A      |
+|    0   N/A  N/A           23576    C+G   ...Files (x86)\GamePP\GamePP.exe      N/A      |
+|    0   N/A  N/A           30256    C+G   ...2p2nqsd0c76g0\app\ChatGPT.exe      N/A      |
+|    0   N/A  N/A           38704    C+G   ...2p2nqsd0c76g0\app\ChatGPT.exe      N/A      |
+|    0   N/A  N/A           39160    C+G   ...t\Edge\Application\msedge.exe      N/A      |
+|    0   N/A  N/A           39912    C+G   ...yb3d8bbwe\WindowsTerminal.exe      N/A      |
+|    0   N/A  N/A           39992    C+G   ...t\Edge\Application\msedge.exe      N/A      |
++-----------------------------------------------------------------------------------------+

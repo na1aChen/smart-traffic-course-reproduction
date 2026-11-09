@@ -1,0 +1,3 @@
+[submodule "02_代码/源码/yolov10"]
+	path = 02_代码/源码/yolov10
+	url = https://github.com/THU-MIG/yolov10.git

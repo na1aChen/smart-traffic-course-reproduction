@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-11-07T20:28:30+08:00",
+  "purpose": "Environment training-chain smoke test only; not a model result",
+  "cuda": true,
+  "amp_fp16": true,
+  "optimizer": "AdamW",
+  "steps": 10,
+  "loss_first": 1.068779468536377,
+  "loss_last": 0.5104503631591797,
+  "loss_decreased": true,
+  "max_memory_allocated_bytes": 20765696
+}

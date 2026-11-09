@@ -1,0 +1,5 @@
+Loading weights from local directory
+inference_ok=True
+detections=5
+elapsed_s=0.8356
+max_memory_allocated=204243968

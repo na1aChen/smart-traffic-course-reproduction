@@ -1,0 +1,72 @@
+{
+  "locked_at": "2026-11-07T20:08:00+08:00",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "python": {
+    "version": "3.10.6",
+    "executable": "<PROJECT_ROOT>\\02_代码\\环境\\venv\\Scripts\\python.exe"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "memory_mib": 8188,
+    "driver_version": "595.79",
+    "compute_capability": [8, 9]
+  },
+  "pytorch": {
+    "torch": "2.0.1+cu118",
+    "torchvision": "0.15.2+cu118",
+    "cuda_build": "11.8",
+    "cudnn": 8700,
+    "cuda_available": true,
+    "gpu_matmul_passed": true
+  },
+  "model_smoke_test": {
+    "class": "YOLOv10DetectionModel",
+    "parameters": 2775520,
+    "device": "cuda:0",
+    "status": "passed"
+  },
+  "inference_smoke_test": {
+    "input": "ultralytics/assets/bus.jpg",
+    "detections": 5,
+    "elapsed_seconds_first_call": 0.8356,
+    "max_memory_allocated_bytes": 204243968,
+    "note": "chain validation only; not a formal latency benchmark"
+  },
+  "dependency_check": {
+    "pip_check": "No broken requirements found",
+    "numpy": "1.26.4"
+  },
+  "source": {
+    "repository": "https://github.com/THU-MIG/yolov10",
+    "commit": "453c6e38a51e9d1d5a2aa5fb7f1014a711913397",
+    "commit_date": "2025-03-14T10:53:57+08:00",
+    "license": "AGPL-3.0",
+    "working_tree": "clean"
+  },
+  "official_pretrained_model": {
+    "repository": "https://huggingface.co/jameslahm/yolov10n",
+    "repository_commit": "3b91f578c5b492080f191a26aa35711bb44f608c",
+    "config_path": "<PROJECT_ROOT>\\02_代码\\权重\\yolov10n_hf\\config.json",
+    "weights_path": "<PROJECT_ROOT>\\02_代码\\权重\\yolov10n_hf\\model.safetensors",
+    "weights_size_bytes": 11245792,
+    "weights_sha256": "98E5B4D81A20D1E8A972CD0BE947944838CCD61F7F7E61828349A647D3607433",
+    "load_api": "YOLOv10.from_pretrained(local_directory)",
+    "load_status": "passed"
+  },
+  "fallback_pt_file": {
+    "path": "<PROJECT_ROOT>\\02_代码\\权重\\yolov10n.pt",
+    "size_bytes": 11447983,
+    "sha256": "55E1563D55DB0A2BF89446D30131F0462C23A56C87B9C73A64C2F73CB5959365",
+    "status": "not used as the provenance authority"
+  },
+  "torch_wheel": {
+    "url": "https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp310-cp310-win_amd64.whl",
+    "size_bytes": 2619146901,
+    "sha256": "F58D75619BC96E4322343C030B893613701CAA2D6DB8017155DA226C14171335"
+  },
+  "torchvision_wheel": {
+    "url": "https://download.pytorch.org/whl/cu118/torchvision-0.15.2%2Bcu118-cp310-cp310-win_amd64.whl",
+    "size_bytes": 4947556,
+    "sha256": "BFD2435D681418BEA8DACDE2B2CB6E5DD40A0E0243D3631E2B71C10BF9831F39"
+  }
+}

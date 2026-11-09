@@ -1,0 +1,67 @@
+{
+  "data_root": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\data",
+  "output_root": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\output",
+  "annotation_path": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\data\\annotations.json",
+  "annotation_sha256": "1f4954eee7ed74ff9fc56fac6200d4617469d258b51c0cf8e805b149082b565f",
+  "official_train_ids": 2,
+  "official_test_images": 1,
+  "derived_val_images": 1,
+  "derived_train_images": 1,
+  "removed_train_ids_due_to_test_overlap": 0,
+  "removed_train_images_due_to_exact_content_overlap": 0,
+  "val_fraction": 0.5,
+  "seed": 42,
+  "classes": 45,
+  "selected_boxes": {
+    "train": 45,
+    "val": 45,
+    "test": 45
+  },
+  "link_mode": "hardlink",
+  "archive_path": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\data.zip",
+  "archive_size_bytes": 15,
+  "archive_sha256": "f8b1f712f078009f786ea23ebe0a2b14498c80f454453ed6e8384ad54041acfc"
+}
+{
+  "data_root": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\data",
+  "output_root": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\output",
+  "annotation_path": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\data\\annotations.json",
+  "annotation_sha256": "1f4954eee7ed74ff9fc56fac6200d4617469d258b51c0cf8e805b149082b565f",
+  "official_train_ids": 2,
+  "official_test_images": 1,
+  "derived_val_images": 1,
+  "derived_train_images": 1,
+  "removed_train_ids_due_to_test_overlap": 0,
+  "removed_train_images_due_to_exact_content_overlap": 0,
+  "val_fraction": 0.5,
+  "seed": 42,
+  "classes": 45,
+  "selected_boxes": {
+    "train": 45,
+    "val": 45,
+    "test": 45
+  },
+  "link_mode": "hardlink",
+  "archive_path": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\data.zip",
+  "archive_size_bytes": 15,
+  "archive_sha256": "f8b1f712f078009f786ea23ebe0a2b14498c80f454453ed6e8384ad54041acfc"
+}
+{
+  "dataset_root": "<LOCAL_USER>\\AppData\\Local\\Temp\\tt100k_converter_l_8h7w__\\output",
+  "classes": 45,
+  "images": {
+    "train": 1,
+    "val": 1,
+    "test": 1
+  },
+  "boxes": {
+    "train": 45,
+    "val": 45,
+    "test": 45
+  },
+  "manifest_sha256": "6d0a451d0ff25729c85b504df26ad8873bd5626bbaa6e2e9db403e9e12a38c34",
+  "class_to_id_sha256": "ed84c21e2d1590810b974e6a825a24e3192fe9595ca4c2c7511588a5e57cdb39",
+  "labels_tree_sha256": "f3a7966d86ea947eb2e9cfe26d0c6aa6e5de8e6cfec4523a7cdefdbc93a91810",
+  "validation": "passed"
+}
+TT100K conversion smoke test passed

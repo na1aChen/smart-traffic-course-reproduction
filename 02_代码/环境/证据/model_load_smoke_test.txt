@@ -1,0 +1,4 @@
+model_class=YOLOv10DetectionModel
+parameters=2775520
+device=cuda:0
+cuda_available=True

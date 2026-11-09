@@ -1,0 +1,73 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.codex/
+~$*
+*.tmp
+*.zip
+*.7z
+*.part
+*.partial-*
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local runtimes and installers
+02_代码/环境/venv/
+02_代码/环境/wheels/
+02_代码/环境/tools/
+02_代码/环境/**/*.whl
+
+# Model weights and exported model binaries
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.safetensors
+*.bin
+02_代码/权重/
+
+# Large TT100K payloads; manifests, class mappings and statistics stay tracked
+03_实验/datasets/TT100K/raw/
+03_实验/datasets/TT100K/extracted/
+03_实验/datasets/TT100K/download_evidence/
+03_实验/datasets/TT100K/guard-test/
+03_实验/datasets/TT100K/qa/
+03_实验/datasets/TT100K/yolo/images/
+03_实验/datasets/TT100K/yolo/labels/
+03_实验/datasets/TT100K/**/*.cache
+03_实验/数据/
+
+# Runtime logs and generated raw predictions
+03_实验/logs/
+03_实验/**/labels/
+03_实验/**/console.log
+03_实验/**/predictions_category*.json
+03_实验/**/predictions.json
+
+# Generated model/checkpoint directories
+03_实验/**/train/weights/
+03_实验/**/checkpoints/
+03_实验/**/*.cache
+
+# Generated dataset previews; summary curves and evaluation figures stay tracked
+03_实验/**/train_batch*.jpg
+03_实验/**/val_batch*.jpg
+03_实验/**/qa_coco_roundtrip/perfect_gt_*/
+
+# Temporary tool output
+02_代码/工具/tmp*
+
+# Temporary render and QA directories
+01_立项/模板审计_主核验/
+01_立项/模板审计_复核渲染/
+01_立项/模板审计_LibreOffice复验/
+**/.ipynb_checkpoints/
