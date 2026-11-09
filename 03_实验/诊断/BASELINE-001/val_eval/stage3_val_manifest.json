@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-11-08T18:29:21+08:00",
+  "status": "passed",
+  "purpose": "Validation-only diagnostic confirmation; test split was not run",
+  "checkpoint": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\train\\weights\\best.pt",
+  "data_yaml": "<PROJECT_ROOT>\\03_实验\\datasets\\TT100K\\yolo\\tt100k.yaml",
+  "split": "val",
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 100,
+  "results": {
+    "metrics/precision(B)": 0.5205410050912972,
+    "metrics/recall(B)": 0.5405401263682258,
+    "metrics/mAP50(B)": 0.5218342243964591,
+    "metrics/mAP50-95(B)": 0.4007116488128635,
+    "fitness": 0.41282390637122307
+  },
+  "speed_ms_per_image": {
+    "preprocess": 0.29766286005739306,
+    "inference": 4.386336686181241,
+    "loss": 0.0,
+    "postprocess": 0.28415742467661376
+  },
+  "label_directory": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\val_eval\\labels"
+}

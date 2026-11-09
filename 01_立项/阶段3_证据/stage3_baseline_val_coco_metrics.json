@@ -1,0 +1,14 @@
+{
+  "ground_truth": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\val_metric_recompute\\ground_truth_coco.json",
+  "predictions_category0": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\val_metric_recompute\\predictions_category0.json",
+  "predictions_category1": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\val_metric_recompute\\predictions_category1.json",
+  "map50_95": 0.40096037079372326,
+  "map50": 0.5224057221712015,
+  "map75": 0.4741379612218771,
+  "map_small": 0.24762529210348005,
+  "map_medium": 0.4817883430141289,
+  "map_large": 0.7035907278136349,
+  "mar100": 0.7249211789950447,
+  "images": 610,
+  "categories": 45
+}

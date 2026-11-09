@@ -1,0 +1,210 @@
+{
+  "created_at": "2026-11-08T18:43:45+08:00",
+  "experiment_id": "BASELINE-001",
+  "purpose": "Stage 3 descriptive error diagnosis and validation confirmation",
+  "operational_confidence": 0.25,
+  "match_iou": 0.5,
+  "near_iou": 0.1,
+  "frozen_test_check": {
+    "test_images_loaded_from_frozen_split": 3071,
+    "test_ground_truth": 7706,
+    "test_predictions_loaded_from_saved_labels": 307100,
+    "coco_images": 3071,
+    "coco_annotations": 7706,
+    "coco_categories": 45,
+    "test_inference_rerun": false,
+    "consistent": true
+  },
+  "test_summary": {
+    "ground_truth": 7706,
+    "detections": 6780,
+    "tp": 4440,
+    "confusion": 930,
+    "near_localization": 11,
+    "missed": 2325,
+    "background_fp": 441,
+    "duplicate": 969
+  },
+  "val_summary": {
+    "ground_truth": 1553,
+    "detections": 1342,
+    "tp": 875,
+    "confusion": 197,
+    "near_localization": 2,
+    "missed": 479,
+    "background_fp": 89,
+    "duplicate": 181
+  },
+  "mechanism_snapshot": {
+    "test": {
+      "split": "test",
+      "ground_truth_by_size": {
+        "medium": 3811,
+        "small": 3302,
+        "large": 593
+      },
+      "missed_by_size": {
+        "small": 1634,
+        "medium": 597,
+        "large": 94
+      },
+      "small_ground_truth_share": 0.42849727485076566,
+      "small_share_of_all_misses": 0.7027956989247311,
+      "small_tp_recall": 0.42126,
+      "medium_tp_recall": 0.686434,
+      "large_tp_recall": 0.730185,
+      "small_minus_medium_recall": -0.26517399999999997,
+      "confusion_count": 930,
+      "confusion_share_of_gt": 0.12068518037892552,
+      "speed_limit_family_confusions": 388,
+      "speed_limit_family_share_of_confusions": 0.4172043010752688,
+      "within_class_size_control": {
+        "classes_with_at_least_5_small_and_5_medium": 43,
+        "classes_with_medium_recall_above_small": 39,
+        "median_medium_minus_small_recall": 0.2857142857142857
+      },
+      "top_confusions": [
+        {
+          "true_class_id": 29,
+          "true_class": "pl60",
+          "predicted_class_id": 26,
+          "predicted_class": "pl40",
+          "count": 52,
+          "share_of_gt": 0.006747988580327018,
+          "share_of_confusions": 0.05591397849462366
+        },
+        {
+          "true_class_id": 25,
+          "true_class": "pl30",
+          "predicted_class_id": 26,
+          "predicted_class": "pl40",
+          "count": 24,
+          "share_of_gt": 0.003114456267843239,
+          "share_of_confusions": 0.025806451612903226
+        },
+        {
+          "true_class_id": 28,
+          "true_class": "pl50",
+          "predicted_class_id": 26,
+          "predicted_class": "pl40",
+          "count": 23,
+          "share_of_gt": 0.002984687256683104,
+          "share_of_confusions": 0.024731182795698924
+        },
+        {
+          "true_class_id": 10,
+          "true_class": "p12",
+          "predicted_class_id": 37,
+          "predicted_class": "po",
+          "count": 21,
+          "share_of_gt": 0.0027251492343628343,
+          "share_of_confusions": 0.02258064516129032
+        },
+        {
+          "true_class_id": 17,
+          "true_class": "p6",
+          "predicted_class_id": 37,
+          "predicted_class": "po",
+          "count": 19,
+          "share_of_gt": 0.0024656112120425644,
+          "share_of_confusions": 0.02043010752688172
+        }
+      ],
+      "spearman_train_support_vs_map50_95": 0.5021411171052541
+    },
+    "val": {
+      "split": "val",
+      "ground_truth_by_size": {
+        "medium": 736,
+        "small": 720,
+        "large": 97
+      },
+      "missed_by_size": {
+        "small": 361,
+        "medium": 103,
+        "large": 15
+      },
+      "small_ground_truth_share": 0.463618802318094,
+      "small_share_of_all_misses": 0.7536534446764092,
+      "small_tp_recall": 0.404167,
+      "medium_tp_recall": 0.697011,
+      "large_tp_recall": 0.731959,
+      "small_minus_medium_recall": -0.29284400000000005,
+      "confusion_count": 197,
+      "confusion_share_of_gt": 0.12685125563425628,
+      "speed_limit_family_confusions": 90,
+      "speed_limit_family_share_of_confusions": 0.45685279187817257,
+      "within_class_size_control": {
+        "classes_with_at_least_5_small_and_5_medium": 23,
+        "classes_with_medium_recall_above_small": 22,
+        "median_medium_minus_small_recall": 0.32536764705882354
+      },
+      "top_confusions": [
+        {
+          "true_class_id": 29,
+          "true_class": "pl60",
+          "predicted_class_id": 26,
+          "predicted_class": "pl40",
+          "count": 17,
+          "share_of_gt": 0.010946555054732776,
+          "share_of_confusions": 0.08629441624365482
+        },
+        {
+          "true_class_id": 1,
+          "true_class": "i4",
+          "predicted_class_id": 2,
+          "predicted_class": "i5",
+          "count": 7,
+          "share_of_gt": 0.004507405022537025,
+          "share_of_confusions": 0.03553299492385787
+        },
+        {
+          "true_class_id": 8,
+          "true_class": "p10",
+          "predicted_class_id": 37,
+          "predicted_class": "po",
+          "count": 7,
+          "share_of_gt": 0.004507405022537025,
+          "share_of_confusions": 0.03553299492385787
+        },
+        {
+          "true_class_id": 23,
+          "true_class": "pl120",
+          "predicted_class_id": 22,
+          "predicted_class": "pl100",
+          "count": 7,
+          "share_of_gt": 0.004507405022537025,
+          "share_of_confusions": 0.03553299492385787
+        },
+        {
+          "true_class_id": 25,
+          "true_class": "pl30",
+          "predicted_class_id": 26,
+          "predicted_class": "pl40",
+          "count": 7,
+          "share_of_gt": 0.004507405022537025,
+          "share_of_confusions": 0.03553299492385787
+        }
+      ],
+      "spearman_train_support_vs_map50_95": null
+    }
+  },
+  "outputs": {
+    "per_class": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\per_class_diagnostics.csv",
+    "size_bucket": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\size_bucket_metrics.csv",
+    "confusion": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\confusion_pairs.csv",
+    "threshold_sweep": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\threshold_sweep.csv",
+    "test_gt_events": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\test_gt_events.csv",
+    "test_pred_events": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\test_pred_events.csv",
+    "val_gt_events": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\val_gt_events.csv",
+    "val_pred_events": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\val_pred_events.csv",
+    "case_manifest": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\case_manifest.csv",
+    "figures": [
+      "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\figures\\class_ap_vs_support.png",
+      "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\figures\\size_bucket_recall.png",
+      "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\figures\\top_confusion_pairs.png",
+      "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\figures\\threshold_sweep.png",
+      "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\figures\\case_montage.png"
+    ]
+  }
+}

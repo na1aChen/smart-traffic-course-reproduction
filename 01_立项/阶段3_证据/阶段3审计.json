@@ -1,0 +1,475 @@
+{
+  "updated_at": "2026-11-08T18:49:42+08:00",
+  "stage": 3,
+  "experiment_id": "BASELINE-001",
+  "status": "passed",
+  "checks": {
+    "frozen_test_consistent": {
+      "passed": true,
+      "detail": {
+        "test_images_loaded_from_frozen_split": 3071,
+        "test_ground_truth": 7706,
+        "test_predictions_loaded_from_saved_labels": 307100,
+        "coco_images": 3071,
+        "coco_annotations": 7706,
+        "coco_categories": 45,
+        "test_inference_rerun": false,
+        "consistent": true
+      }
+    },
+    "test_predictions_not_rerun_during_stage3": {
+      "passed": true,
+      "detail": {
+        "latest_stage2_frozen_write": "2026-11-08T17:39:25.155343+08:00",
+        "stage3_val_start": "2026-11-08T18:29:21+08:00"
+      }
+    },
+    "prediction_export_complete": {
+      "passed": true,
+      "detail": {
+        "files": 3071,
+        "lines": 307100
+      }
+    },
+    "validation_confirmation_ran_on_val_only": {
+      "passed": true,
+      "detail": {
+        "created_at": "2026-11-08T18:29:21+08:00",
+        "status": "passed",
+        "purpose": "Validation-only diagnostic confirmation; test split was not run",
+        "checkpoint": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\train\\weights\\best.pt",
+        "data_yaml": "<PROJECT_ROOT>\\03_实验\\datasets\\TT100K\\yolo\\tt100k.yaml",
+        "split": "val",
+        "conf": 0.001,
+        "iou": 0.7,
+        "max_det": 100,
+        "results": {
+          "metrics/precision(B)": 0.5205410050912972,
+          "metrics/recall(B)": 0.5405401263682258,
+          "metrics/mAP50(B)": 0.5218342243964591,
+          "metrics/mAP50-95(B)": 0.4007116488128635,
+          "fitness": 0.41282390637122307
+        },
+        "speed_ms_per_image": {
+          "preprocess": 0.29766286005739306,
+          "inference": 4.386336686181241,
+          "loss": 0.0,
+          "postprocess": 0.28415742467661376
+        },
+        "label_directory": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\val_eval\\labels"
+      }
+    },
+    "all_45_test_classes_present": {
+      "passed": true,
+      "detail": {
+        "rows": 45
+      }
+    },
+    "size_buckets_present": {
+      "passed": true,
+      "detail": [
+        {
+          "split": "test",
+          "bucket_type": "coco",
+          "bucket": "small",
+          "ground_truth": 3302,
+          "tp": 1391,
+          "confusion": 266,
+          "near_localization": 11,
+          "missed": 1634,
+          "tp_recall": 0.42126,
+          "matched_any_recall": 0.501817
+        },
+        {
+          "split": "test",
+          "bucket_type": "coco",
+          "bucket": "medium",
+          "ground_truth": 3811,
+          "tp": 2616,
+          "confusion": 598,
+          "near_localization": 0,
+          "missed": 597,
+          "tp_recall": 0.686434,
+          "matched_any_recall": 0.843348
+        },
+        {
+          "split": "test",
+          "bucket_type": "coco",
+          "bucket": "large",
+          "ground_truth": 593,
+          "tp": 433,
+          "confusion": 66,
+          "near_localization": 0,
+          "missed": 94,
+          "tp_recall": 0.730185,
+          "matched_any_recall": 0.841484
+        },
+        {
+          "split": "test",
+          "bucket_type": "fine",
+          "bucket": "<=16",
+          "ground_truth": 250,
+          "tp": 25,
+          "confusion": 3,
+          "near_localization": 0,
+          "missed": 222,
+          "tp_recall": 0.1,
+          "matched_any_recall": 0.112
+        },
+        {
+          "split": "test",
+          "bucket_type": "fine",
+          "bucket": "16-24",
+          "ground_truth": 1655,
+          "tp": 573,
+          "confusion": 109,
+          "near_localization": 10,
+          "missed": 963,
+          "tp_recall": 0.346224,
+          "matched_any_recall": 0.412085
+        },
+        {
+          "split": "test",
+          "bucket_type": "fine",
+          "bucket": "24-32",
+          "ground_truth": 1397,
+          "tp": 793,
+          "confusion": 154,
+          "near_localization": 1,
+          "missed": 449,
+          "tp_recall": 0.567645,
+          "matched_any_recall": 0.677881
+        },
+        {
+          "split": "test",
+          "bucket_type": "fine",
+          "bucket": "32-48",
+          "ground_truth": 1873,
+          "tp": 1197,
+          "confusion": 283,
+          "near_localization": 0,
+          "missed": 393,
+          "tp_recall": 0.639082,
+          "matched_any_recall": 0.790176
+        },
+        {
+          "split": "test",
+          "bucket_type": "fine",
+          "bucket": "48-64",
+          "ground_truth": 1051,
+          "tp": 727,
+          "confusion": 187,
+          "near_localization": 0,
+          "missed": 137,
+          "tp_recall": 0.691722,
+          "matched_any_recall": 0.869648
+        },
+        {
+          "split": "test",
+          "bucket_type": "fine",
+          "bucket": ">64",
+          "ground_truth": 1480,
+          "tp": 1125,
+          "confusion": 194,
+          "near_localization": 0,
+          "missed": 161,
+          "tp_recall": 0.760135,
+          "matched_any_recall": 0.891216
+        }
+      ]
+    },
+    "small_target_mechanism_reproduced": {
+      "passed": true,
+      "detail": {
+        "test": {
+          "split": "test",
+          "ground_truth_by_size": {
+            "medium": 3811,
+            "small": 3302,
+            "large": 593
+          },
+          "missed_by_size": {
+            "small": 1634,
+            "medium": 597,
+            "large": 94
+          },
+          "small_ground_truth_share": 0.42849727485076566,
+          "small_share_of_all_misses": 0.7027956989247311,
+          "small_tp_recall": 0.42126,
+          "medium_tp_recall": 0.686434,
+          "large_tp_recall": 0.730185,
+          "small_minus_medium_recall": -0.26517399999999997,
+          "confusion_count": 930,
+          "confusion_share_of_gt": 0.12068518037892552,
+          "speed_limit_family_confusions": 388,
+          "speed_limit_family_share_of_confusions": 0.4172043010752688,
+          "within_class_size_control": {
+            "classes_with_at_least_5_small_and_5_medium": 43,
+            "classes_with_medium_recall_above_small": 39,
+            "median_medium_minus_small_recall": 0.2857142857142857
+          },
+          "top_confusions": [
+            {
+              "true_class_id": 29,
+              "true_class": "pl60",
+              "predicted_class_id": 26,
+              "predicted_class": "pl40",
+              "count": 52,
+              "share_of_gt": 0.006747988580327018,
+              "share_of_confusions": 0.05591397849462366
+            },
+            {
+              "true_class_id": 25,
+              "true_class": "pl30",
+              "predicted_class_id": 26,
+              "predicted_class": "pl40",
+              "count": 24,
+              "share_of_gt": 0.003114456267843239,
+              "share_of_confusions": 0.025806451612903226
+            },
+            {
+              "true_class_id": 28,
+              "true_class": "pl50",
+              "predicted_class_id": 26,
+              "predicted_class": "pl40",
+              "count": 23,
+              "share_of_gt": 0.002984687256683104,
+              "share_of_confusions": 0.024731182795698924
+            },
+            {
+              "true_class_id": 10,
+              "true_class": "p12",
+              "predicted_class_id": 37,
+              "predicted_class": "po",
+              "count": 21,
+              "share_of_gt": 0.0027251492343628343,
+              "share_of_confusions": 0.02258064516129032
+            },
+            {
+              "true_class_id": 17,
+              "true_class": "p6",
+              "predicted_class_id": 37,
+              "predicted_class": "po",
+              "count": 19,
+              "share_of_gt": 0.0024656112120425644,
+              "share_of_confusions": 0.02043010752688172
+            }
+          ],
+          "spearman_train_support_vs_map50_95": 0.5021411171052541
+        },
+        "val": {
+          "split": "val",
+          "ground_truth_by_size": {
+            "medium": 736,
+            "small": 720,
+            "large": 97
+          },
+          "missed_by_size": {
+            "small": 361,
+            "medium": 103,
+            "large": 15
+          },
+          "small_ground_truth_share": 0.463618802318094,
+          "small_share_of_all_misses": 0.7536534446764092,
+          "small_tp_recall": 0.404167,
+          "medium_tp_recall": 0.697011,
+          "large_tp_recall": 0.731959,
+          "small_minus_medium_recall": -0.29284400000000005,
+          "confusion_count": 197,
+          "confusion_share_of_gt": 0.12685125563425628,
+          "speed_limit_family_confusions": 90,
+          "speed_limit_family_share_of_confusions": 0.45685279187817257,
+          "within_class_size_control": {
+            "classes_with_at_least_5_small_and_5_medium": 23,
+            "classes_with_medium_recall_above_small": 22,
+            "median_medium_minus_small_recall": 0.32536764705882354
+          },
+          "top_confusions": [
+            {
+              "true_class_id": 29,
+              "true_class": "pl60",
+              "predicted_class_id": 26,
+              "predicted_class": "pl40",
+              "count": 17,
+              "share_of_gt": 0.010946555054732776,
+              "share_of_confusions": 0.08629441624365482
+            },
+            {
+              "true_class_id": 1,
+              "true_class": "i4",
+              "predicted_class_id": 2,
+              "predicted_class": "i5",
+              "count": 7,
+              "share_of_gt": 0.004507405022537025,
+              "share_of_confusions": 0.03553299492385787
+            },
+            {
+              "true_class_id": 8,
+              "true_class": "p10",
+              "predicted_class_id": 37,
+              "predicted_class": "po",
+              "count": 7,
+              "share_of_gt": 0.004507405022537025,
+              "share_of_confusions": 0.03553299492385787
+            },
+            {
+              "true_class_id": 23,
+              "true_class": "pl120",
+              "predicted_class_id": 22,
+              "predicted_class": "pl100",
+              "count": 7,
+              "share_of_gt": 0.004507405022537025,
+              "share_of_confusions": 0.03553299492385787
+            },
+            {
+              "true_class_id": 25,
+              "true_class": "pl30",
+              "predicted_class_id": 26,
+              "predicted_class": "pl40",
+              "count": 7,
+              "share_of_gt": 0.004507405022537025,
+              "share_of_confusions": 0.03553299492385787
+            }
+          ],
+          "spearman_train_support_vs_map50_95": null
+        }
+      }
+    },
+    "primary_confusion_pair_present": {
+      "passed": true,
+      "detail": {
+        "split": "test",
+        "true_class_id": 29,
+        "true_class": "pl60",
+        "predicted_class_id": 26,
+        "predicted_class": "pl40",
+        "count": 52,
+        "share_of_gt": 0.006747988580327,
+        "share_of_confusions": 0.0559139784946236
+      }
+    },
+    "eight_deterministic_cases_present": {
+      "passed": true,
+      "detail": {
+        "manifest_rows": 8,
+        "case_files": [
+          "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\cases\\case_01_55730.png",
+          "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\cases\\case_02_85881.png",
+          "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\cases\\case_03_42891.png",
+          "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\cases\\case_04_31493.png",
+          "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\cases\\case_05_76474.png",
+          "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\cases\\case_06_22673.png",
+          "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\cases\\case_07_62157.png",
+          "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\cases\\case_08_95151.png"
+        ]
+      }
+    },
+    "required_documents_present": {
+      "passed": true,
+      "detail": {
+        "design": "<PROJECT_ROOT>\\01_立项\\阶段3_证据\\阶段3诊断设计.md",
+        "diagnosis": "<PROJECT_ROOT>\\01_立项\\阶段3_证据\\诊断结果.md",
+        "visual_qa": "<PROJECT_ROOT>\\01_立项\\阶段3_证据\\阶段3图表QA.md",
+        "summary": "<PROJECT_ROOT>\\01_立项\\阶段总结\\阶段3_总结.md"
+      }
+    },
+    "summary_names_single_factor_candidate": {
+      "passed": true,
+      "detail": {
+        "summary": "<PROJECT_ROOT>\\01_立项\\阶段总结\\阶段3_总结.md"
+      }
+    },
+    "visual_qa_records_alignment_fix": {
+      "passed": true,
+      "detail": {
+        "visual_qa": "<PROJECT_ROOT>\\01_立项\\阶段3_证据\\阶段3图表QA.md"
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "path": "<PROJECT_ROOT>\\02_代码\\阶段3\\diagnose_stage3.py",
+      "exists": true,
+      "size_bytes": 55498,
+      "sha256": "A26B982C9A2D036870B992977DE76F391822066F63062917AF9B2D4CF844E747"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\analysis_summary.json",
+      "exists": true,
+      "size_bytes": 8134,
+      "sha256": "9130A67849B583BDF5F9A25162CE8114CDB325E99D1394D8F3AD5B0C81C1A2D9"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\per_class_diagnostics.csv",
+      "exists": true,
+      "size_bytes": 7041,
+      "sha256": "DD3F64F50ED5B225AB72A51236FF275B84B09AAD238B7C212F23499F47A04D1D"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\size_bucket_metrics.csv",
+      "exists": true,
+      "size_bytes": 1026,
+      "sha256": "D2FD773E1B92E40CF3B411379C573B3CEC1A5C13E0A2058528275C730C28ABC4"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\confusion_pairs.csv",
+      "exists": true,
+      "size_bytes": 21550,
+      "sha256": "9FD0098E02362F9EBE3BD224E2210DC7F085DE453CF7F88C86B6708CE25D1619"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\threshold_sweep.csv",
+      "exists": true,
+      "size_bytes": 542,
+      "sha256": "45F41FF3B6CE87A436A195AE6EF117366D9EFFD7B27E77EA2971040DC9DB53C4"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\case_manifest.csv",
+      "exists": true,
+      "size_bytes": 3394,
+      "sha256": "1441E1318AEC57018D42887DC0D8871C0483AB949A1CD8455DA811723ED49E36"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\test_gt_events.csv",
+      "exists": true,
+      "size_bytes": 1800602,
+      "sha256": "91BAC7ABE21853297E05B9D8E980A6F48DD517123D084B818AACA2AAE1E60005"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\test_pred_events.csv",
+      "exists": true,
+      "size_bytes": 1001726,
+      "sha256": "30D5739B58DDB7596B339BD718A522929216CB2F5B6429A0AA8706786905552D"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\figures\\case_montage.png",
+      "exists": true,
+      "size_bytes": 1184686,
+      "sha256": "A194E343CC29FBBB36CE4A6275BB7C9238371D25EACA3877DCE691711EB39E66"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段3_证据\\阶段3诊断设计.md",
+      "exists": true,
+      "size_bytes": 3236,
+      "sha256": "2DE7AA5A9B626A9DD8A6701E649D7922EA4CE83360C7201B8264FB256BAA2543"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段3_证据\\诊断结果.md",
+      "exists": true,
+      "size_bytes": 9765,
+      "sha256": "1BD7C2290F9CAFA2CFC2CD088E474370092C7663447CB981D7B5EEA0157C3E01"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段3_证据\\阶段3图表QA.md",
+      "exists": true,
+      "size_bytes": 1534,
+      "sha256": "3D4373E64B4BD08600DC25FB1FC0B9053E70CC22B42BEA183B5B34FB50131622"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段总结\\阶段3_总结.md",
+      "exists": true,
+      "size_bytes": 10446,
+      "sha256": "C98DA660DD438E1827EFCDA4E6A0CC6EF6A4DEC7203F2DBEC438430515809CF0"
+    }
+  ]
+}
