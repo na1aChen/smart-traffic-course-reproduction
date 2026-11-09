@@ -1,0 +1,191 @@
+{
+  "updated_at": "2026-11-09T11:48:41+08:00",
+  "stage": 4,
+  "experiment_id": "P2-001",
+  "status": "passed",
+  "decision": "small-object mechanism directionally supported, but model not selected",
+  "checks": [
+    {
+      "name": "training_completed",
+      "passed": true,
+      "detail": {
+        "status": "passed",
+        "completed_epochs": 40,
+        "results_rows": 40,
+        "losses_finite": true
+      }
+    },
+    {
+      "name": "best_validation_epoch",
+      "passed": true,
+      "detail": {
+        "epoch": 38,
+        "mAP50": 0.50865,
+        "mAP50-95": 0.38725
+      }
+    },
+    {
+      "name": "p2_detection_scales",
+      "passed": true,
+      "detail": {
+        "training_strides": [
+          4.0,
+          8.0,
+          16.0,
+          32.0
+        ],
+        "architecture_status": "passed",
+        "smoke_status": "passed"
+      }
+    },
+    {
+      "name": "test_evaluated_exactly_once",
+      "passed": true,
+      "detail": {
+        "test_eval_directories": [
+          "<PROJECT_ROOT>\\03_实验\\P2-001\\test_eval"
+        ],
+        "evaluation_status": "passed",
+        "run_status": "passed"
+      }
+    },
+    {
+      "name": "prediction_export_complete",
+      "passed": true,
+      "detail": {
+        "files": 3071,
+        "lines": 307100
+      }
+    },
+    {
+      "name": "per_class_metrics_complete",
+      "passed": true,
+      "detail": {
+        "rows": 45
+      }
+    },
+    {
+      "name": "yolo_coco_metrics_consistent",
+      "passed": true,
+      "detail": {
+        "yolo_mAP50": 0.49988168537127686,
+        "coco_mAP50": 0.499294794125624,
+        "yolo_mAP50_95": 0.3733508059909003,
+        "coco_mAP50_95": 0.3726577105519382
+      }
+    },
+    {
+      "name": "small_object_mechanism_direction",
+      "passed": true,
+      "detail": {
+        "val_small_delta": 0.04177151526906214,
+        "test_small_delta": 0.04381262480243686
+      }
+    },
+    {
+      "name": "overall_tradeoff_recorded",
+      "passed": true,
+      "detail": {
+        "val_mAP50_95_delta": -0.012750000000000039,
+        "test_mAP50_95_delta": -0.0031443921907643446
+      }
+    },
+    {
+      "name": "validation_diagnostic_ran_on_val_only",
+      "passed": true,
+      "detail": {
+        "status": "passed",
+        "split": "val",
+        "test_inference_run": false
+      }
+    },
+    {
+      "name": "required_artifacts_exist",
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "name": "negative_result_decision_recorded",
+      "passed": true,
+      "detail": {
+        "summary": "<PROJECT_ROOT>\\01_立项\\阶段总结\\阶段4_总结.md"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "<PROJECT_ROOT>\\02_代码\\阶段4\\stage4_runner.py",
+      "exists": true,
+      "size_bytes": 26649,
+      "sha256": "B268451E7A2520ACBCEF9B174308F40EF09F3C2FDC669C31DE6FDAFC9B0D339A"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\02_代码\\阶段4\\analyze_stage4.py",
+      "exists": true,
+      "size_bytes": 13476,
+      "sha256": "CBC23F2D61C6703D3EAD12E4B74056B46FBA497913ECDC95A9E6C5833A8B0ADD"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\P2-001\\train\\results.csv",
+      "exists": true,
+      "size_bytes": 19721,
+      "sha256": "499B648627B16F6653F70CAA2B317BA9BA31960D6A9C8D2A2B86401BDF219246"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\P2-001\\train\\weights\\best.pt",
+      "exists": true,
+      "size_bytes": 6463485,
+      "sha256": "2CBE8BC8F6A1224456A4B4C552CB51F4BD4F812C123C8B09F91C30A048A3B929"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\P2-001\\test_eval\\metrics_yolov10.json",
+      "exists": true,
+      "size_bytes": 390,
+      "sha256": "E0FC4BD98C634C141B3355658A18E00BC6ED2FEF2EDD3D39E4A9E2D98FD1A02C"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\P2-001\\test_eval\\per_class_metrics.csv",
+      "exists": true,
+      "size_bytes": 3740,
+      "sha256": "B72515086FF74D89E7F806E0302CBF24C50724C7BCA2FF47B8AFED7073E1724D"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\P2-001\\test_eval\\predictions_category0.json",
+      "exists": true,
+      "size_bytes": 50589191,
+      "sha256": "4317CFF3C7B04C19CC12E6628BD90A4A63636DF62EB9907932226E10760B4A12"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段4_证据\\stage4_training_summary.json",
+      "exists": true,
+      "size_bytes": 1947,
+      "sha256": "94D353C0EC370FBD464105AFBB81DF521DBDDC53CBA7EDAD8E6B23F37CC3449B"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段4_证据\\stage4_test_evaluation.json",
+      "exists": true,
+      "size_bytes": 2175,
+      "sha256": "0AB599599DCDC4FAE8CF38805AC0A9BCA9B7803B0D72EED63A714DB746EC00C0"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段4_证据\\stage4_comparison.json",
+      "exists": true,
+      "size_bytes": 7279,
+      "sha256": "1506F4DB34EE01A7AB7D0AB10B7B7BBECF965433763CB380780875973B91BA73"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段4_证据\\阶段4结果分析.md",
+      "exists": true,
+      "size_bytes": 5259,
+      "sha256": "5356C34C69B480458F2E5E7EE7F376F246039A7A60E42398F4288E365C72F594"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段总结\\阶段4_总结.md",
+      "exists": true,
+      "size_bytes": 9755,
+      "sha256": "90554A3A98927C8AD23BBB479DC84DC778C32502A9D971DEE91A08CE3B12CC60"
+    }
+  ]
+}

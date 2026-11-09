@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-11-09T11:42:51+08:00",
+  "status": "passed",
+  "experiment_id": "P2-001",
+  "checkpoint": "<PROJECT_ROOT>\\03_实验\\P2-001\\train\\weights\\best.pt",
+  "split": "val",
+  "test_inference_run": false,
+  "metrics_yolov10": {
+    "metrics/precision(B)": 0.5417281243728792,
+    "metrics/recall(B)": 0.47708512769163647,
+    "metrics/mAP50(B)": 0.5083282041488166,
+    "metrics/mAP50-95(B)": 0.38764638946999846,
+    "fitness": 0.3997145709378803
+  },
+  "recomputed_metrics": {
+    "ground_truth": "<PROJECT_ROOT>\\03_实验\\P2-001\\val_eval\\ground_truth_coco.json",
+    "predictions_category0": "<PROJECT_ROOT>\\03_实验\\P2-001\\val_eval\\predictions_category0.json",
+    "predictions_category1": "<PROJECT_ROOT>\\03_实验\\P2-001\\val_eval\\predictions_category1.json",
+    "map50_95": 0.38804878309055146,
+    "map50": 0.5093393402887115,
+    "map75": 0.4511262321905074,
+    "map_small": 0.2893968073725422,
+    "map_medium": 0.46566481253145936,
+    "map_large": 0.6246312927787759,
+    "mar100": 0.7691451827836616,
+    "images": 610,
+    "categories": 45
+  }
+}

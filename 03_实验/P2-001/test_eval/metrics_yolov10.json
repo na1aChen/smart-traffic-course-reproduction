@@ -1,0 +1,11 @@
+{
+  "metrics/precision(B)": 0.4612879936021833,
+  "metrics/recall(B)": 0.5300026194910423,
+  "metrics/mAP50(B)": 0.49988168537127686,
+  "metrics/mAP50-95(B)": 0.3733508059909003,
+  "fitness": 0.38600389392893797,
+  "inference_ms_per_image": 12.180596677382036,
+  "preprocess_ms_per_image": 0.329189135949878,
+  "postprocess_ms_per_image": 0.20418063082705876,
+  "imgsz": 640.0
+}

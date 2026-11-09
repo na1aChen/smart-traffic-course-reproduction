@@ -1,0 +1,37 @@
+experiment_id: P2-001
+stage: 4
+purpose: 验证加入 P2/4 浅层高分辨率分支能否改善小目标检测
+dataset_version: TT100K-2016-type45-stage1
+split_manifest: D:/文档/2026秋季/智能加交通/大作业2/项目/03_实验/datasets/TT100K/yolo/manifests/split_manifest.json
+baseline_experiment: BASELINE-001
+baseline_test_map50: 0.500520
+baseline_test_map50_95: 0.375802
+baseline_test_map50_95_small: 0.212520
+source_commit: 453c6e38a51e9d1d5a2aa5fb7f1014a711913397
+initial_weights: D:/文档/2026秋季/智能加交通/大作业2/项目/02_代码/权重/yolov10n.pt
+architecture_yaml: D:/文档/2026秋季/智能加交通/大作业2/项目/02_代码/阶段4/configs/yolov10n-p2-45.yaml
+single_factor: enable_p2_high_resolution_branch
+seed: 2026
+imgsz: 640
+batch: 8
+epochs: 40
+device: 0
+workers: 0
+optimizer: SGD
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_bias_lr: 0.1
+nbs: 64
+patience: 10
+amp: true
+deterministic: true
+cos_lr: false
+close_mosaic: 5
+smoke_required_before_training: true
+test_policy: 训练与验证完成并冻结 best.pt 后，测试集只评估一次
+notes: >-
+  P2 分支之外不得同时修改损失函数、数据增强、类别权重或优化器。若 batch 8
+  在 smoke 中 OOM，不得静默改为不同训练预算启动正式实验。

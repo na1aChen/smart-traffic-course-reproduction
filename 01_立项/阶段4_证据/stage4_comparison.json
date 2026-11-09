@@ -1,0 +1,282 @@
+{
+  "created_at": "2026-11-09T11:43:17+08:00",
+  "experiment_id": "P2-001",
+  "comparison_against": "BASELINE-001",
+  "operational_confidence": 0.25,
+  "test_inference_count": 1,
+  "metric_comparison": {
+    "baseline_test_map50": 0.5005196908838662,
+    "p2_test_map50": 0.499294794125624,
+    "delta_test_map50": -0.0012248967582421666,
+    "baseline_test_map50_95": 0.37580210274270254,
+    "p2_test_map50_95": 0.3726577105519382,
+    "delta_test_map50_95": -0.0031443921907643446,
+    "baseline_test_map_small": 0.21251967358424584,
+    "p2_test_map_small": 0.2563322983866827,
+    "delta_test_map_small": 0.04381262480243686,
+    "baseline_test_map_medium": 0.44335702557011347,
+    "p2_test_map_medium": 0.4385322943660057,
+    "delta_test_map_medium": -0.004824731204107757,
+    "baseline_test_map_large": 0.5584415505465079,
+    "p2_test_map_large": 0.46715976028832984,
+    "delta_test_map_large": -0.09128179025817806,
+    "baseline_val_map50": 0.52162,
+    "p2_val_map50": 0.50865,
+    "delta_val_map50": -0.012969999999999926,
+    "baseline_val_map50_95": 0.4,
+    "p2_val_map50_95": 0.38725,
+    "delta_val_map50_95": -0.012750000000000039,
+    "baseline_val_best_epoch": 39,
+    "p2_val_best_epoch": 38,
+    "baseline_val_map_small": 0.24762529210348005,
+    "p2_val_map_small": 0.2893968073725422,
+    "delta_val_map_small": 0.04177151526906214
+  },
+  "test_operational": {
+    "baseline": {
+      "ground_truth": 7706,
+      "detections": 6780,
+      "tp": 4440,
+      "confusion": 930,
+      "near_localization": 11,
+      "missed": 2325,
+      "background_fp": 441,
+      "duplicate": 969
+    },
+    "p2": {
+      "ground_truth": 7706,
+      "detections": 7282,
+      "tp": 4679,
+      "confusion": 1041,
+      "near_localization": 0,
+      "missed": 1986,
+      "background_fp": 544,
+      "duplicate": 1018
+    }
+  },
+  "val_operational": {
+    "baseline": {
+      "ground_truth": 1553,
+      "detections": 1342,
+      "tp": 875,
+      "confusion": 197,
+      "near_localization": 2,
+      "missed": 479,
+      "background_fp": 89,
+      "duplicate": 181
+    },
+    "p2": {
+      "ground_truth": 1553,
+      "detections": 1443,
+      "tp": 927,
+      "confusion": 215,
+      "near_localization": 2,
+      "missed": 409,
+      "background_fp": 111,
+      "duplicate": 190
+    }
+  },
+  "test_size_buckets": [
+    {
+      "bucket_type": "coco",
+      "bucket": "small",
+      "ground_truth": 3302,
+      "tp": 1814,
+      "confusion": 369,
+      "near_localization": 0,
+      "missed": 1119,
+      "tp_recall": 0.549364,
+      "matched_any_recall": 0.661114
+    },
+    {
+      "bucket_type": "coco",
+      "bucket": "medium",
+      "ground_truth": 3811,
+      "tp": 2546,
+      "confusion": 586,
+      "near_localization": 0,
+      "missed": 679,
+      "tp_recall": 0.668066,
+      "matched_any_recall": 0.821832
+    },
+    {
+      "bucket_type": "coco",
+      "bucket": "large",
+      "ground_truth": 593,
+      "tp": 319,
+      "confusion": 86,
+      "near_localization": 0,
+      "missed": 188,
+      "tp_recall": 0.537943,
+      "matched_any_recall": 0.682968
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "<=16",
+      "ground_truth": 250,
+      "tp": 63,
+      "confusion": 12,
+      "near_localization": 0,
+      "missed": 175,
+      "tp_recall": 0.252,
+      "matched_any_recall": 0.3
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "16-24",
+      "ground_truth": 1655,
+      "tp": 891,
+      "confusion": 183,
+      "near_localization": 0,
+      "missed": 581,
+      "tp_recall": 0.538369,
+      "matched_any_recall": 0.648943
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "24-32",
+      "ground_truth": 1397,
+      "tp": 860,
+      "confusion": 174,
+      "near_localization": 0,
+      "missed": 363,
+      "tp_recall": 0.615605,
+      "matched_any_recall": 0.740157
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "32-48",
+      "ground_truth": 1873,
+      "tp": 1216,
+      "confusion": 279,
+      "near_localization": 0,
+      "missed": 378,
+      "tp_recall": 0.649226,
+      "matched_any_recall": 0.798185
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "48-64",
+      "ground_truth": 1051,
+      "tp": 704,
+      "confusion": 181,
+      "near_localization": 0,
+      "missed": 166,
+      "tp_recall": 0.669838,
+      "matched_any_recall": 0.842055
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": ">64",
+      "ground_truth": 1480,
+      "tp": 945,
+      "confusion": 212,
+      "near_localization": 0,
+      "missed": 323,
+      "tp_recall": 0.638514,
+      "matched_any_recall": 0.781757
+    }
+  ],
+  "val_size_buckets": [
+    {
+      "bucket_type": "coco",
+      "bucket": "small",
+      "ground_truth": 720,
+      "tp": 387,
+      "confusion": 81,
+      "near_localization": 2,
+      "missed": 250,
+      "tp_recall": 0.5375,
+      "matched_any_recall": 0.65
+    },
+    {
+      "bucket_type": "coco",
+      "bucket": "medium",
+      "ground_truth": 736,
+      "tp": 482,
+      "confusion": 123,
+      "near_localization": 0,
+      "missed": 131,
+      "tp_recall": 0.654891,
+      "matched_any_recall": 0.822011
+    },
+    {
+      "bucket_type": "coco",
+      "bucket": "large",
+      "ground_truth": 97,
+      "tp": 58,
+      "confusion": 11,
+      "near_localization": 0,
+      "missed": 28,
+      "tp_recall": 0.597938,
+      "matched_any_recall": 0.71134
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "<=16",
+      "ground_truth": 81,
+      "tp": 20,
+      "confusion": 3,
+      "near_localization": 1,
+      "missed": 57,
+      "tp_recall": 0.246914,
+      "matched_any_recall": 0.283951
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "16-24",
+      "ground_truth": 330,
+      "tp": 188,
+      "confusion": 36,
+      "near_localization": 1,
+      "missed": 105,
+      "tp_recall": 0.569697,
+      "matched_any_recall": 0.678788
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "24-32",
+      "ground_truth": 309,
+      "tp": 179,
+      "confusion": 42,
+      "near_localization": 0,
+      "missed": 88,
+      "tp_recall": 0.579288,
+      "matched_any_recall": 0.71521
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "32-48",
+      "ground_truth": 338,
+      "tp": 209,
+      "confusion": 55,
+      "near_localization": 0,
+      "missed": 74,
+      "tp_recall": 0.618343,
+      "matched_any_recall": 0.781065
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": "48-64",
+      "ground_truth": 195,
+      "tp": 131,
+      "confusion": 37,
+      "near_localization": 0,
+      "missed": 27,
+      "tp_recall": 0.671795,
+      "matched_any_recall": 0.861538
+    },
+    {
+      "bucket_type": "fine",
+      "bucket": ">64",
+      "ground_truth": 300,
+      "tp": 200,
+      "confusion": 42,
+      "near_localization": 0,
+      "missed": 58,
+      "tp_recall": 0.666667,
+      "matched_any_recall": 0.806667
+    }
+  ],
+  "figure": "<PROJECT_ROOT>\\01_立项\\阶段4_证据\\stage4_metric_comparison.png"
+}
