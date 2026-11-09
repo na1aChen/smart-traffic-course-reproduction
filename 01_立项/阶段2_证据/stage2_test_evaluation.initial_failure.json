@@ -1,0 +1,18 @@
+{
+  "experiment_id": "BASE_YOLOV10N_TT100K45_S2026",
+  "started_at": "2026-11-08T17:33:18+08:00",
+  "status": "failed",
+  "checkpoint": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\train\\weights\\best.pt",
+  "data_yaml": "<PROJECT_ROOT>\\03_实验\\datasets\\TT100K\\yolo\\tt100k.yaml",
+  "split": "test",
+  "selection_rule": "best.pt selected by validation fitness; test evaluated once",
+  "model": {
+    "parameters": 2724590,
+    "flops_gflops_at_imgsz": 0.0,
+    "flops_error": null
+  },
+  "error": "KeyError: '0'",
+  "traceback": "Traceback (most recent call last):\n  File \"<PROJECT_ROOT>\\02_代码\\阶段2\\stage2_runner.py\", line 685, in run_evaluation\n    plain_metrics, per_class = _plain_metrics(metrics, imgsz=args.imgsz)\n  File \"<PROJECT_ROOT>\\02_代码\\阶段2\\stage2_runner.py\", line 443, in _plain_metrics\n    else names[class_key],\nKeyError: '0'\n",
+  "elapsed_seconds": 246.314,
+  "finished_at": "2026-11-08T17:37:24+08:00"
+}

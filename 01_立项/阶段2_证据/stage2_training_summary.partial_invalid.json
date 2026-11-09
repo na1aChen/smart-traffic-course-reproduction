@@ -1,0 +1,20 @@
+{
+  "experiment_id": "BASE_YOLOV10N_TT100K45_S2026",
+  "started_at": "2026-11-08T12:33:55+08:00",
+  "status": "passed",
+  "data_yaml": "<PROJECT_ROOT>\\03_实验\\datasets\\TT100K\\yolo\\tt100k.yaml",
+  "weights_hf": "<PROJECT_ROOT>\\02_代码\\权重\\yolov10n_hf",
+  "trainable_weight_carrier": "<PROJECT_ROOT>\\02_代码\\权重\\yolov10n.pt",
+  "command_arguments": {
+    "command": "train",
+    "device": "0",
+    "workers": 0,
+    "seed": 2026,
+    "epochs": 40,
+    "batch": 8,
+    "imgsz": 640,
+    "optimizer": "SGD",
+    "patience": 10,
+    "close_mosaic": 5,
+    "save_period": 5,
+    "func": 

@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-11-08T12:33:55+08:00",
+  "hf_directory": "<PROJECT_ROOT>\\02_代码\\权重\\yolov10n_hf",
+  "pt_carrier": "<PROJECT_ROOT>\\02_代码\\权重\\yolov10n.pt",
+  "hf_ckpt_is_empty": true,
+  "pt_ckpt_is_nonempty": true,
+  "tensor_count_hf": 595,
+  "tensor_count_pt": 595,
+  "keys_equal": true,
+  "all_tensors_exactly_equal": true,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "training_initialization_rule": "Use YOLOv10(local .pt) so Model.train carries the non-empty checkpoint into the reconstructed 45-class model; HF remains the provenance authority."
+}

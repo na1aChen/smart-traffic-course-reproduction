@@ -1,0 +1,32 @@
+experiment_id: BASELINE-001
+stage: 2
+purpose: 在固定 TT100K 45 类划分上复现 YOLOv10-N 迁移学习基线
+dataset_version: TT100K-2016-type45-stage1
+split_manifest: D:/文档/2026秋季/智能加交通/大作业2/项目/03_实验/datasets/TT100K/yolo/manifests/split_manifest.json
+weights: D:/文档/2026秋季/智能加交通/大作业2/项目/02_代码/权重/yolov10n_hf
+weights_source_sha256: 98E5B4D81A20D1E8A972CD0BE947944838CCD61F7F7E61828349A647D3607433
+trainable_weight_carrier: D:/文档/2026秋季/智能加交通/大作业2/项目/02_代码/权重/yolov10n.pt
+trainable_weight_carrier_sha256: 55E1563D55DB0A2BF89446D30131F0462C23A56C87B9C73A64C2F73CB5959365
+source_commit: 453c6e38a51e9d1d5a2aa5fb7f1014a711913397
+seed: 2026
+imgsz: 640
+batch: 8
+epochs: 40
+device: 0
+workers: 0
+optimizer: SGD
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_bias_lr: 0.1
+nbs: 64
+patience: 10
+amp: true
+deterministic: true
+cos_lr: false
+close_mosaic: 5
+notes: >-
+  以官方 COCO 预训练权重迁移到 45 类。单卡 8 GiB 下使用 batch 8，40 个 epoch，
+  无 DataLoader worker；这是受算力约束的同配方基线，不等同于论文 500 轮、8 卡 COCO 结果。

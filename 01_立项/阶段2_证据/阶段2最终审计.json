@@ -1,0 +1,320 @@
+{
+  "checked_at": "2026-11-08T17:44:53+08:00",
+  "experiment_id": "BASE_YOLOV10N_TT100K45_S2026",
+  "status": "passed",
+  "summary_metrics": {
+    "best_epoch_csv": 39,
+    "best_fitness_csv": 0.41216200000000003,
+    "best_map50_validation": 0.52162,
+    "best_map50_95_validation": 0.4,
+    "test_map50_yolov10": 0.501,
+    "test_map50_95_yolov10": 0.376,
+    "test_map50_coco_recomputed": 0.5005196908838662,
+    "test_map50_95_coco_recomputed": 0.37580210274270254
+  },
+  "checks": {
+    "required_artifacts_exist": {
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    "training_status_passed": {
+      "passed": true,
+      "detail": "passed"
+    },
+    "evaluation_status_passed": {
+      "passed": true,
+      "detail": "passed"
+    },
+    "weights_exactly_equivalent": {
+      "passed": true,
+      "detail": {
+        "tensor_count": 595,
+        "mismatch_count": 0
+      }
+    },
+    "coco_roundtrip_passed": {
+      "passed": true,
+      "detail": {
+        "ground_truth": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\qa_coco_roundtrip\\perfect_gt__6stgs6a\\ground_truth_coco.json",
+        "predictions_category0": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\qa_coco_roundtrip\\perfect_gt__6stgs6a\\predictions_category0.json",
+        "predictions_category1": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\qa_coco_roundtrip\\perfect_gt__6stgs6a\\predictions_category1.json",
+        "map50_95": 1.0,
+        "map50": 1.0,
+        "map75": 1.0,
+        "map_small": 1.0,
+        "map_medium": 1.0,
+        "map_large": 1.0,
+        "mar100": 1.0,
+        "images": 3071,
+        "categories": 45
+      }
+    },
+    "data_entry_probe_passed": {
+      "passed": true,
+      "detail": {
+        "passed_probes": [
+          "probe_20261108_123034_i640_b8"
+        ]
+      }
+    },
+    "baseline_config_locked": {
+      "passed": true,
+      "detail": {
+        "seed": 2026,
+        "imgsz": 640,
+        "batch": 8,
+        "optimizer": "SGD",
+        "amp": true,
+        "deterministic": true,
+        "split": "val"
+      }
+    },
+    "results_csv_present_and_finite": {
+      "passed": true,
+      "detail": {
+        "epochs_recorded": 40,
+        "all_numeric_values_finite": true
+      }
+    },
+    "validation_best_recorded": {
+      "passed": true,
+      "detail": {
+        "epoch": 39,
+        "fitness": 0.41216200000000003,
+        "map50_95": 0.4,
+        "map50": 0.52162
+      }
+    },
+    "best_checkpoint_loads": {
+      "passed": true,
+      "detail": {
+        "raw_epoch_after_strip": -1,
+        "epoch_one_based_before_strip_if_available": null,
+        "fitness": 0.41216,
+        "keys": [
+          "best_fitness",
+          "date",
+          "docs",
+          "ema",
+          "epoch",
+          "license",
+          "model",
+          "optimizer",
+          "train_args",
+          "train_metrics",
+          "train_results",
+          "updates",
+          "version"
+        ]
+      }
+    },
+    "best_checkpoint_matches_csv": {
+      "passed": true,
+      "detail": {
+        "raw_checkpoint_epoch_after_strip": -1,
+        "checkpoint_epoch_one_based_if_available": null,
+        "checkpoint_epoch_note": "Ultralytics strip_optimizer rewrites the final best.pt epoch to -1; identity is verified by train_metrics fitness and metric values.",
+        "checkpoint_fitness": 0.41216,
+        "csv_best_epoch": 39,
+        "csv_best_fitness_derived": 0.41216200000000003,
+        "comparison_tolerance": 5e-05
+      }
+    },
+    "splits_disjoint": {
+      "passed": true,
+      "detail": {
+        "train_val_ids": 0,
+        "train_val_content_hashes": 0,
+        "train_test_ids": 0,
+        "train_test_content_hashes": 0,
+        "val_test_ids": 0,
+        "val_test_content_hashes": 0
+      }
+    },
+    "test_ground_truth_complete": {
+      "passed": true,
+      "detail": {
+        "images": 3071,
+        "categories": 45,
+        "annotations": 7706
+      }
+    },
+    "raw_predictions_saved": {
+      "passed": true,
+      "detail": {
+        "prediction_count": 307100,
+        "prediction_files": 3071
+      }
+    },
+    "per_class_metrics_present": {
+      "passed": true,
+      "detail": {
+        "class_rows": 45
+      }
+    },
+    "independent_metric_recomputed": {
+      "passed": true,
+      "detail": {
+        "yolov10_map50": 0.501,
+        "yolov10_map50_95": 0.376,
+        "coco_map50": 0.5005196908838662,
+        "coco_map50_95": 0.37580210274270254,
+        "map50_absolute_difference": 0.00048030911613383687,
+        "map50_95_absolute_difference": 0.00019789725729746355,
+        "max_allowed_absolute_difference": 0.01
+      }
+    },
+    "training_curves_and_validation_plots_present": {
+      "passed": true,
+      "detail": {
+        "results.png": true,
+        "confusion_matrix.png": true,
+        "confusion_matrix_normalized.png": true,
+        "val_batch0_labels.jpg": true,
+        "val_batch0_pred.jpg": true
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\stage2_training_summary.json",
+      "exists": true,
+      "size_bytes": 4940,
+      "sha256": "699DB8F765E790B3040BA445C77385ED70F98ADBA7A00C2F4672A90912617437"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\stage2_test_evaluation.json",
+      "exists": true,
+      "size_bytes": 3642,
+      "sha256": "781EB39EC08AE8760E2E5FDCBB8950F579A3D6B1ABB98ABE07E60D1477BE69B4"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\权重等价性校验.json",
+      "exists": true,
+      "size_bytes": 683,
+      "sha256": "CADBC92D5B32E0863FCFF0C9658347549DEC74512EA1490527EF4A95A4DABBD1"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\qa_coco_roundtrip\\qa_coco_roundtrip.json",
+      "exists": true,
+      "size_bytes": 970,
+      "sha256": "F7F74C47C829ECE0909EAF0B3C0F251D8F7893E2B3278DDD871C30D373F96544"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\train\\results.csv",
+      "exists": true,
+      "size_bytes": 19721,
+      "sha256": "BF34CD5638FC329B61268A2DB7D863C19C716638A4153656B0F4275FCA13FA17"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\train\\weights\\best.pt",
+      "exists": true,
+      "size_bytes": 5820301,
+      "sha256": "7C14335CF3CFF5548A3B183A2D93B5041F2B4C6AAE6D1DAF5DEB04F1B471B848"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\train\\weights\\last.pt",
+      "exists": true,
+      "size_bytes": 5820493,
+      "sha256": "76C6BD03F9C90E0F7762D431ACAA9FC6CF6286FD9963544E2F8C39C9835C9F56"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\test_eval\\per_class_metrics.csv",
+      "exists": true,
+      "size_bytes": 1478,
+      "sha256": "36CBF1815D305A22867C221B3C442C9394DDCDE356BF6133F22CB32F3DD6280C"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\test_eval\\metrics_yolov10.json",
+      "exists": true,
+      "size_bytes": 419,
+      "sha256": "71F70BE6FA03C27F9B4F06CE5F554BD22A82A3C3D4922579F3C814EDA8BAB2F3"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\test_eval\\predictions_category0.json",
+      "exists": true,
+      "size_bytes": 50587324,
+      "sha256": "E1FB83D8B1846839228BFC0AC2D9CF9DC5FD05B0A89BDACE9E2E86E540F7BB48"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\test_eval\\ground_truth_coco.json",
+      "exists": true,
+      "size_bytes": 2317655,
+      "sha256": "54A2C9AEC3817B430A87584946683BD2157651B01F36628EEC20273CAD5980FA"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\stage2_probe_summary.json",
+      "exists": true,
+      "size_bytes": 1450,
+      "sha256": "4BA71363911B67342898558620ED7D3985FB2F14C4F1DD3EAA248D2A330A279D"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\02_代码\\阶段2\\官方命令与本机命令对照.md",
+      "exists": true,
+      "size_bytes": 5226,
+      "sha256": "2F2C0444F95DD3077CD050F92F4FF48E5240898AC8B1C1EA8D8615033B62E0DA"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\阶段2实验设计.md",
+      "exists": true,
+      "size_bytes": 2796,
+      "sha256": "6711026A0D961051B9FB286F39901A8F3818E7F1F32840971BC89B7760C4C61D"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\环境补充记录.md",
+      "exists": true,
+      "size_bytes": 1418,
+      "sha256": "6A05AD5516BA5C62F511F8ECB2C5839821A2BD8951B937D8730B8BB1CEFABFEA"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\恢复与失败记录.md",
+      "exists": true,
+      "size_bytes": 4556,
+      "sha256": "A0C60AF7F879511235A439FFB420483B94BF63F78F91D20A53C9284F3B9D7209"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\图表目视QA.md",
+      "exists": true,
+      "size_bytes": 1120,
+      "sha256": "30EB3B07A45400120305411D6DBC68C85991255CCDE9A5B03AC1D1394B6693BA"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\stage2_training_summary.partial_invalid.json",
+      "exists": true,
+      "size_bytes": 758,
+      "sha256": "365AB7A9AE1215D4C9D95D95326483ED93DC97B0C94EB92E0BB33222816F6519"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\stage2_training_summary.recovered.json",
+      "exists": true,
+      "size_bytes": 4940,
+      "sha256": "699DB8F765E790B3040BA445C77385ED70F98ADBA7A00C2F4672A90912617437"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\stage2_test_evaluation.initial_failure.json",
+      "exists": true,
+      "size_bytes": 1158,
+      "sha256": "BB6015343F07D4DAFBA03F7D673C442F5D4FAD83531A1247D5ABD627FC7BE38F"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段2_证据\\stage2_test_evaluation.recovered.json",
+      "exists": true,
+      "size_bytes": 3642,
+      "sha256": "781EB39EC08AE8760E2E5FDCBB8950F579A3D6B1ABB98ABE07E60D1477BE69B4"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\train\\args.yaml",
+      "exists": true,
+      "size_bytes": 1950,
+      "sha256": "A03378E1A770FEB39DA727FCECAF1C1B3FD510F23DCF02C16949E7871CAE7D41"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\train\\console.log",
+      "exists": true,
+      "size_bytes": 9141343,
+      "sha256": "F66882C1981C66F3D88F417188531CB4F9ECDD20B454203B2FE1C6650B2B952D"
+    }
+  ]
+}

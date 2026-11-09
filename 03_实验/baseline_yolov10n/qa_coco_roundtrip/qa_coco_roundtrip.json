@@ -1,0 +1,20 @@
+{
+  "description": "把测试集真实标注直接当作满分预测，验证 txt->COCO 往返。",
+  "prediction_count": 7706,
+  "unicode_checkpoint_save_passed": true,
+  "metrics": {
+    "ground_truth": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\qa_coco_roundtrip\\perfect_gt__6stgs6a\\ground_truth_coco.json",
+    "predictions_category0": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\qa_coco_roundtrip\\perfect_gt__6stgs6a\\predictions_category0.json",
+    "predictions_category1": "<PROJECT_ROOT>\\03_实验\\baseline_yolov10n\\qa_coco_roundtrip\\perfect_gt__6stgs6a\\predictions_category1.json",
+    "map50_95": 1.0,
+    "map50": 1.0,
+    "map75": 1.0,
+    "map_small": 1.0,
+    "map_medium": 1.0,
+    "map_large": 1.0,
+    "mar100": 1.0,
+    "images": 3071,
+    "categories": 45
+  },
+  "passed": true
+}
