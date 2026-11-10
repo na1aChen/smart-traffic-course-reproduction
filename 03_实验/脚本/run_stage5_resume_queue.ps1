@@ -5,11 +5,23 @@ $python = Join-Path $projectRoot '02_代码\环境\venv\Scripts\python.exe'
 $runner = Join-Path $projectRoot '02_代码\阶段5\stage5_runner.py'
 $logRoot = Join-Path $projectRoot '03_实验\logs\STAGE5'
 $queueStatusPath = Join-Path $logRoot 'queue_status.json'
+$watcherScript = Join-Path $projectRoot '03_实验\脚本\watch_stage5_checkpoints.ps1'
 $experiments = @(
     'BASELINE-002-S2027',
     'P2-002-S2027',
     'BASELINE-BUDGET48-S2026'
 )
+
+$watcher = Get-CimInstance Win32_Process |
+    Where-Object { $_.CommandLine -match 'watch_stage5_checkpoints\.ps1' -and $_.ProcessId -ne $PID }
+if (-not $watcher) {
+    Start-Process -FilePath (Join-Path $PSHOME 'pwsh.exe') `
+        -ArgumentList @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', $watcherScript) `
+        -WorkingDirectory $projectRoot `
+        -WindowStyle Hidden `
+        -RedirectStandardOutput (Join-Path $logRoot 'checkpoint_watcher_resume_stdout.log') `
+        -RedirectStandardError (Join-Path $logRoot 'checkpoint_watcher_resume_stderr.log') | Out-Null
+}
 
 if (-not (Test-Path -LiteralPath $queueStatusPath)) {
     throw "Stage 5 queue status not found: $queueStatusPath"
