@@ -1,0 +1,8 @@
+﻿report_element,usage,source_path
+表1,TT100K固定划分图像数与标注框数,03_实验/datasets/TT100K/yolo/manifests/dataset_summary.json
+表2,五组检测实验seed、epoch、imgsz、batch与最佳验证轮,01_立项/阶段6_证据/最终主表.csv
+表3,BASELINE-001内置指标与COCO复算指标,01_立项/阶段2_证据/stage2_test_evaluation.json;01_立项/阶段5_证据/stage5_experiment_metrics.csv
+表4,检测泛化结果、P2两seed和48轮预算对照,01_立项/阶段6_证据/最终主表.csv
+表5,SYS5S-001接口、完整测试复算与自动检查,01_立项/阶段5S_证据/forecast_result.json;01_立项/阶段5S_证据/阶段5S_资产检查.json;01_立项/阶段5S_证据/阶段5S审计.json
+图2-图4,训练损失、尺寸分桶与检测主结果,01_立项/阶段6_证据/主图冻结清单.csv;01_立项/阶段6_证据/最终主表.csv
+图5-图6,模块级联数据流与单窗口预测差,01_立项/阶段5S_证据/阶段5S预注册与接口设计.md;01_立项/阶段5S_证据/forecast_result.json;01_立项/阶段5S_证据/cascade_predictions.npz

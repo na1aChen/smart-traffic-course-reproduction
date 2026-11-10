@@ -1,0 +1,169 @@
+{
+  "generated_at": "2026-11-10T21:25:29+08:00",
+  "stage": "7",
+  "report_title": "基于 TT100K 的交通标志小目标检测复现与验证性改进",
+  "source_template": "04_报告/模板副本/智能交通-课程报告_大作业2_骨架.docx",
+  "source_template_sha256": "FDD2C42B3ACDEF9A412DB2F3CCAA2D85D26A7DD081DA876CF3CB325D5CC00662",
+  "content_source": "04_报告/工作区/报告正文.md",
+  "content_source_sha256": "BF3E2301D2305600C11D471C6E901F2B8A0114C726CA909B55B95009E7C50470",
+  "output_docx": "04_报告/基于TT100K的交通标志小目标检测复现与验证性改进报告.docx",
+  "output_docx_sha256": "993A9C2FFE3AF8BCDB79F0D60D12E33A3FE87CDBEA6CF1AF0A08218FB90E4996",
+  "output_size_bytes": 710916,
+  "percentages_in_content": [
+    "42.8497%",
+    "70.2796%",
+    "46.3619%",
+    "75.3653%",
+    "1.4722%"
+  ],
+  "paragraphs_after_build": 138,
+  "tables_after_build": 6,
+  "sections_after_build": 2,
+  "inline_shapes_after_build": 8,
+  "content_stats": {
+    "paragraphs": 63,
+    "tables": 5,
+    "figures": 6
+  },
+  "figures": {
+    "research_route": "C2C12F293F2803D409F8F798BC5A6D823A16D8DA7B574AD5D47CD2E1C06D38A2",
+    "baseline_losses": "21BC45BCDC2FDAD2A6C4B59B274BD89B2AF41E6F199FCE95BC35125E2F79840C",
+    "size_bucket_ap": "94ABA9EE3A264E05E648B6592FE527B287A7792267B6DFFB776263428BBDC3E2",
+    "detection_main_results": "2FFC3F5DCBE6484987D6253CD70664AC28B579A77012C3FE5C8B30BBF7778B36",
+    "system_dataflow": "3A23496DDFC233002F1F8B8B135F5ABC403975328E2D68CB0E7FA110B804D316",
+    "cascade_difference": "F508F09D42AB13822F6AF399FEA4AAAF9FE6698AEB0EE7A07B511FAD1F278B73"
+  },
+  "figure_dimensions": {
+    "research_route": [
+      1919,
+      689
+    ],
+    "baseline_losses": [
+      2859,
+      850
+    ],
+    "size_bucket_ap": [
+      1599,
+      950
+    ],
+    "detection_main_results": [
+      1779,
+      1021
+    ],
+    "system_dataflow": [
+      2089,
+      636
+    ],
+    "cascade_difference": [
+      1660,
+      947
+    ]
+  },
+  "package_patch": {
+    "first_page_header_relationship": "rId17",
+    "blank_header_part": "word/header2.xml",
+    "update_fields": "true",
+    "preserve_only_parts_restored": [
+      "_rels/.rels",
+      "customXml/_rels/item1.xml.rels",
+      "customXml/item1.xml",
+      "customXml/itemProps1.xml",
+      "docProps/app.xml",
+      "docProps/core.xml",
+      "docProps/custom.xml",
+      "word/fontTable.xml",
+      "word/footer1.xml",
+      "word/header1.xml",
+      "word/media/image1.png",
+      "word/media/image2.png",
+      "word/numbering.xml",
+      "word/styles.xml",
+      "word/theme/theme1.xml"
+    ]
+  },
+  "notes": [
+    "报告由冻结模板副本创建，没有从空白DOCX重建。",
+    "封面信息中的个人学号、姓名、班级和年级未由用户提供，保持模板空位。",
+    "新增空白首页页眉部件，仅用于消除LibreOffice下封面异常顶部横线。",
+    "其余页眉、页脚、样式、编号、主题、图片和关系以模板为准。"
+  ],
+  "toc_page_map": [
+    {
+      "heading": "一、研究背景与意义",
+      "page_number": 2
+    },
+    {
+      "heading": "1.1 研究背景",
+      "page_number": 2
+    },
+    {
+      "heading": "1.2 研究意义与现状",
+      "page_number": 3
+    },
+    {
+      "heading": "二、模型介绍",
+      "page_number": 4
+    },
+    {
+      "heading": "2.1 模型概述",
+      "page_number": 4
+    },
+    {
+      "heading": "2.2 核心网络结构",
+      "page_number": 4
+    },
+    {
+      "heading": "2.3 计算原理与损失函数",
+      "page_number": 5
+    },
+    {
+      "heading": "三、实验训练结果",
+      "page_number": 5
+    },
+    {
+      "heading": "3.1 数据集与预处理",
+      "page_number": 5
+    },
+    {
+      "heading": "3.2 实验环境设置",
+      "page_number": 6
+    },
+    {
+      "heading": "3.3 实验结果与分析",
+      "page_number": 7
+    },
+    {
+      "heading": "四、模型改进与实验",
+      "page_number": 9
+    },
+    {
+      "heading": "4.1 模型改进创新",
+      "page_number": 9
+    },
+    {
+      "heading": "4.2 改进创新实验结果",
+      "page_number": 9
+    },
+    {
+      "heading": "五、拓展实验内容",
+      "page_number": 11
+    },
+    {
+      "heading": "5.1 新增内容介绍",
+      "page_number": 11
+    },
+    {
+      "heading": "5.2 系统总体设计思路",
+      "page_number": 11
+    },
+    {
+      "heading": "5.3 系统效果演示",
+      "page_number": 12
+    },
+    {
+      "heading": "六、实验总结与收获",
+      "page_number": 14
+    }
+  ],
+  "toc_cached_after_render": true
+}
