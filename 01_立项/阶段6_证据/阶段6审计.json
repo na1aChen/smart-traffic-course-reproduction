@@ -1,0 +1,144 @@
+{
+  "stage5s_baseline": {
+    "expected_commit": "f8b736b",
+    "tag": "stage-5s-complete",
+    "tag_commit": "f8b736b4e02ba4271f59283ad050a52915421306"
+  },
+  "stage5s_audit": {
+    "overall_passed": true,
+    "passed": 11,
+    "total": 11,
+    "stage6_action": "读取并冻结既有审计证据，未调用阶段5S运行器。"
+  },
+  "experiment_ids": {
+    "table": [
+      "BASELINE-002-S2027",
+      "BASELINE-BUDGET48-S2026",
+      "BASE_YOLOV10N_TT100K45_S2026",
+      "P2-001",
+      "P2-002-S2027",
+      "SYS5S-001"
+    ],
+    "index_registry": [
+      "BASELINE-002-S2027",
+      "BASELINE-BUDGET48-S2026",
+      "BASE_YOLOV10N_TT100K45_S2026",
+      "P2-001",
+      "P2-002-S2027",
+      "SYS5S-001"
+    ],
+    "index_canonical": [
+      "BASELINE-001",
+      "BASELINE-002-S2027",
+      "BASELINE-BUDGET48-S2026",
+      "P2-001",
+      "P2-002-S2027",
+      "SYS5S-001"
+    ]
+  },
+  "experiment_evidence_path_failures": [],
+  "experiment_table_metric_mismatches": [],
+  "final_table_metric_mismatches": [],
+  "main_table_markdown_missing": [],
+  "loss_failures": [],
+  "test_loss_failures": [],
+  "percentage_failures": [],
+  "figure_failures": [],
+  "hash_manifest": {
+    "entries": 211,
+    "categories": [
+      "config",
+      "data",
+      "evidence",
+      "log_summary",
+      "metadata",
+      "prediction",
+      "script",
+      "stage6_output",
+      "weights"
+    ],
+    "missing_categories": []
+  },
+  "hash_failures": [],
+  "hash_failure_count": 0,
+  "historical_evidence": {
+    "matched_paths": 57,
+    "eol_normalized_matches": 14,
+    "mismatches": []
+  },
+  "version_rule_missing_tokens": [],
+  "main_model_boundary": {
+    "main_model": "BASELINE-001",
+    "test_policy": {
+      "detector_test_inference_per_model": 1,
+      "stage6_retraining": false,
+      "stage6_test_inference": false,
+      "stage6_weight_or_checkpoint_modification": false,
+      "stage5s_reevaluation": false
+    }
+  },
+  "summary": {
+    "path": "<PROJECT_ROOT>\\01_立项\\阶段总结\\阶段6_总结.md",
+    "exists": true,
+    "size_bytes": 11628
+  },
+  "stage7_summary_exists": false,
+  "generator_forbidden_tokens": [],
+  "stage6_artifact_hashes": {
+    "最终主表.csv": "F9C528BC7799B462871527ACDA3E2C027A29916672DFCC6743CF1B0A66A870DC",
+    "最终主表.md": "86993E42A2C05C678E60851905FB24E5D67E37E3737C20F55E891D460716D7D9",
+    "实验证据索引.csv": "B6C79B464AEFE6CBF89FE7C81A308B677ED1726E70BD2806E0C389B0C1DE26F5",
+    "损失口径登记.csv": "0962908E9C6620A3C9F742679BD6A9E1912FCCA0C033E2D81C0EDD3CE87CBAA5",
+    "百分比口径登记.csv": "4F613499362AA02D2BFDB5AC27E234328C337521027C535D094057C5E790BD07",
+    "主图冻结清单.csv": "DA0287CE7BC4D350D6D106752A24F4F9438204A6219ED6CD630CC2095D87A397",
+    "数字变更登记.csv": "B05E4485D3B18CD6F0EFEA79E4C6323251F2E1354C905244B5C2D21A8E183D1B",
+    "证据SHA256清单.csv": "A5A0B30AFA03A911531B1EE004DC96978DD857D9FC63C02063F0D9C8F70E40CA",
+    "冻结元数据.json": "7131226EAC3CFD9FD0D56B9DE6839B258129788CC451DB9095FABE2A1C982B65",
+    "数字变更与版本规则.md": "59CC17A8D6A9478637E446C9A06D5FFECEC4B46BD25E078C47F6E1DBEF8AFBE3",
+    "README.md": "455064F29B7EE8359928310C0FD0A40C584BA7C2E7CF977D0482DBE5677E4574",
+    "build_stage6_freeze.py": "4D02B25DD0E5A619BC11E6E3CBE0E2D01796030BB0E964B10FB9D60D8B9DF53B",
+    "audit_stage6.py": "6C762219135C1183D4A147A27A0161507BB6B3F4297DEC86CAD4B50A19D968C8",
+    "阶段6_总结.md": "E017638583028319FB375C5F9A317F7267A39329B7F480A9E51441D4193D74EB"
+  },
+  "stage6_artifact_hash_failures": [],
+  "repository_state": {
+    "branch": "stage6/evidence-freeze",
+    "head": "35b35ed04c7d12eef23275c11be5823fa6890a91",
+    "stage5s_tag_commit": "f8b736b4e02ba4271f59283ad050a52915421306",
+    "working_tree_note": "审计在阶段6提交前运行；最终提交和标签由后续Git步骤验证。"
+  },
+  "generated_at": "2026-11-10T20:06:19+08:00",
+  "stage": "6",
+  "freeze_version": "stage6-evidence-v1.0.0",
+  "checks": {
+    "stage5s_baseline_pinned": true,
+    "stage5s_audit_passed_without_reevaluation": true,
+    "experiment_ids_complete": true,
+    "experiment_evidence_paths_complete": true,
+    "experiment_table_metrics_consistent": true,
+    "final_table_metrics_consistent": true,
+    "main_table_markdown_consistent": true,
+    "training_validation_losses_separated": true,
+    "test_loss_not_fabricated_or_mixed": true,
+    "percentage_denominators_complete": true,
+    "main_figures_regenerable": true,
+    "sha256_manifest_complete": true,
+    "sha256_manifest_matches_files": true,
+    "historical_evidence_hashes_unchanged": true,
+    "version_rules_present": true,
+    "main_model_and_boundary_declared": true,
+    "stage6_summary_present": true,
+    "stage7_not_started": true,
+    "generator_does_not_train_or_rerun_inference": true,
+    "stage6_artifact_hashes_recorded": true
+  },
+  "passed": 20,
+  "total": 20,
+  "overall_passed": true,
+  "manifest_entries": 211,
+  "figure_count": 4,
+  "experiment_count": 6,
+  "detection_experiment_count": 5,
+  "stage5s_scope": "只冻结既有模块级离线联调原型与审计，不重新评估、重做或扩展。",
+  "no_retraining_or_test_inference": true
+}
