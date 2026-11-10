@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-11-10T18:44:47+08:00",
+  "stage": "5S",
+  "experiment_id": "SYS5S-001",
+  "checks": {
+    "required_files_exist": true,
+    "detector_output_structured": true,
+    "detector_bins_96": true,
+    "checkpoint_strict_load": true,
+    "prediction_arrays_shape_and_finite": true,
+    "chain_scope_disclosed": true,
+    "runner_checks_9_of_9": true,
+    "reference_metrics_reproduced": true,
+    "experiment_table_registered": true,
+    "experiment_run_log_exists": true,
+    "summary_generated": true
+  },
+  "passed": 11,
+  "total": 11,
+  "overall_passed": true,
+  "detector_bins": 96,
+  "prediction_shapes": {
+    "baseline_prediction": [
+      96,
+      170
+    ],
+    "injected_prediction": [
+      96,
+      170
+    ],
+    "target": [
+      96,
+      170
+    ],
+    "detector_proxy": [
+      96
+    ],
+    "clean_input": [
+      96,
+      170
+    ],
+    "injected_input": [
+      96,
+      170
+    ]
+  },
+  "forecast_summary": {
+    "prediction_shape": [
+      96,
+      170
+    ],
+    "mean_abs_prediction_delta": 0.017422980483274394,
+    "max_abs_prediction_delta": 1.7173181772232056,
+    "relative_mean_abs_prediction_delta": 0.014721543203357952,
+    "window_baseline_mse": 0.4447667598724365,
+    "window_baseline_mae": 0.291888028383255,
+    "window_injected_mse_diagnostic_only": 0.45348307490348816,
+    "window_injected_mae_diagnostic_only": 0.2963729500770569,
+    "injected_metrics_are_not_accuracy_evidence": true
+  },
+  "full_test_checkpoint_verification": {
+    "windows": 3381,
+    "values": 55177920,
+    "mse": 0.19372598691850323,
+    "mae": 0.263401475223683,
+    "rmse": 0.44014314366862883,
+    "batch_size": 16,
+    "elapsed_seconds": 3.372,
+    "reference_mse": 0.193726,
+    "reference_mae": 0.263401,
+    "absolute_mse_difference": 1.3081496774702828e-08,
+    "absolute_mae_difference": 4.752236830163348e-07,
+    "tolerance": 0.0001
+  },
+  "file_sha256": {
+    "preregistration": "6E0402074829A5C2E715E77FD1BAAAFA14612BD1983CC479195EE7E8007CC944",
+    "result_analysis": "C4D3381308B3F1611AF995D718F64239A14DC461C4E46A976D43E7EB148AA9B9",
+    "asset_check": "FB37ACC804D2BAF87D7DABCA13F0AE808C840751054C85F0567ADE8CA11ECD39",
+    "forecast_result": "72536A6B4ACC3FAC6A9C1C9BEFEC549C6DF744F76BEB2E5F3C3AF3343FF840DB",
+    "detector_bins": "7740503A0E0DB648E75303AB7D0A6D86A87448FDFCA8A7A55EC409245319234C",
+    "forecast_preview": "BD9C1B7EB34AB501103BF8D78C20B63EE3B175B9A596F08C00B60A229D7E5979",
+    "plot": "11E702454E37AE116625BB555629F1067CF296ED69E28758416DE5C1F1D6ECDF",
+    "runner": "23BD7A1FA58E8DFEF5D4F881B8853176531D7F5B18814170C316D5FE9E8312E0",
+    "summary": "AFCBF8AF79335E6A24D22880865A23E5BFD206996A01D6B30B1AC06BE2F273FB",
+    "predictions": "4849302C14D97C3C473B777D0EF3639D4DAF71D5E8F0FE4A73AB8C8631E2051C"
+  }
+}
