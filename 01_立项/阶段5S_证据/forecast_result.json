@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-11-10T18:44:11+08:00",
+  "experiment_id": "SYS5S-001",
+  "chain_type": "offline_module_cascade_prototype",
+  "valid_as_real_end_to_end_traffic_validation": false,
+  "detector_source": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\test_pred_events.csv",
+  "forecast_source": "<LOCAL_ROOT>\\第一次大作业\\代码\\smart_traffic_itransformer_run_20261022",
+  "detector_adapter": {
+    "csv_rows": 6780,
+    "valid_prediction_events": 6780,
+    "unique_images": 2621,
+    "bins": 96,
+    "proxy_mean_before_standardization": 39.999556814320385,
+    "proxy_std_before_standardization": 6.307152397762219,
+    "mapping_type": "image_id_order_proxy",
+    "valid_as_time_series": false
+  },
+  "cascade_example": {
+    "window_index": 0,
+    "replace_channel": 169,
+    "summary": {
+      "prediction_shape": [
+        96,
+        170
+      ],
+      "mean_abs_prediction_delta": 0.017422980483274394,
+      "max_abs_prediction_delta": 1.7173181772232056,
+      "relative_mean_abs_prediction_delta": 0.014721543203357952,
+      "window_baseline_mse": 0.4447667598724365,
+      "window_baseline_mae": 0.291888028383255,
+      "window_injected_mse_diagnostic_only": 0.45348307490348816,
+      "window_injected_mae_diagnostic_only": 0.2963729500770569,
+      "injected_metrics_are_not_accuracy_evidence": true
+    },
+    "checkpoint_loaded_strict": true
+  },
+  "full_test_checkpoint_verification": {
+    "windows": 3381,
+    "values": 55177920,
+    "mse": 0.19372598691850323,
+    "mae": 0.263401475223683,
+    "rmse": 0.44014314366862883,
+    "batch_size": 16,
+    "elapsed_seconds": 3.372,
+    "reference_mse": 0.193726,
+    "reference_mae": 0.263401,
+    "absolute_mse_difference": 1.3081496774702828e-08,
+    "absolute_mae_difference": 4.752236830163348e-07,
+    "tolerance": 0.0001
+  },
+  "checks": {
+    "detection_events_readable": true,
+    "detector_proxy_length_96": true,
+    "detector_proxy_finite": true,
+    "pems_input_shape_96x170": true,
+    "checkpoint_loaded_strict": true,
+    "prediction_shape_96x170": true,
+    "prediction_finite": true,
+    "injection_effect_nonzero": true,
+    "reference_metrics_reproduced": true
+  },
+  "all_checks_passed": true,
+  "limitations": [
+    "TT100K 图像不是连续时间序列，图像 ID 顺序不能解释为真实时间。",
+    "检测对象是交通标志类别，不是车辆流量或 PEMS08 传感器观测。",
+    "用检测代理替换第169通道是零重训工程适配器，不是训练好的融合模型。",
+    "注入窗口的 MSE/MAE 只作诊断，不能用于声称预测性能提升。",
+    "完整测试集指标只用于验证复用 checkpoint 的可加载性和评估口径。"
+  ]
+}

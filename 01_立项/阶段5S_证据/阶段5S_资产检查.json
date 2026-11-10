@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-11-10T18:44:11+08:00",
+  "experiment_id": "SYS5S-001",
+  "python": "3.10.6",
+  "torch": "2.0.1+cu118",
+  "sklearn": "1.7.2",
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "pems": {
+    "path": "<LOCAL_ROOT>\\第一次大作业\\代码\\smart_traffic_itransformer_run_20261022\\dataset\\PEMS\\PEMS08.npz",
+    "sha256": "E1D03CE74E9FB79149E6E7C37C680214822C4A285BAA2F42278CACABCD25C075",
+    "metadata": {
+      "num_all_steps": 17856,
+      "channels": 170,
+      "train_end": 10713,
+      "valid_end": 14284,
+      "test_steps": 3572
+    }
+  },
+  "checkpoint": {
+    "path": "<LOCAL_ROOT>\\第一次大作业\\代码\\smart_traffic_itransformer_run_20261022\\checkpoints\\PEMS08_imp_time_pl96_iTransformer_TA_PEMS_sl96_pl96_dm512_el4_ms0_hr0_th1_tm1_ut1_s2023_ns1_lr0.0005_bs16_Imp_0\\checkpoint.pth",
+    "sha256": "BA6D2D72D46085560C2D9F61DCC7E219D8A34EC6376AA092E1FD7B509AB5F069",
+    "state_entries": 74,
+    "parameter_tensors": 6434442,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "strict_load": true
+  },
+  "model_source": {
+    "path": "<LOCAL_ROOT>\\第一次大作业\\代码\\smart_traffic_itransformer_run_20261022\\model\\iTransformer_TA.py",
+    "sha256": "0304F9B89B5BE02CA48235D9A33B2C43F4076FFC76323930D5CC2CB9EF5610FB",
+    "import_strategy": "focused import of iTransformer_TA; unused Reformer backend provided an explicit import-only shim"
+  },
+  "detection_events": {
+    "path": "<PROJECT_ROOT>\\03_实验\\诊断\\BASELINE-001\\analysis\\test_pred_events.csv",
+    "sha256": "30D5739B58DDB7596B339BD718A522929216CB2F5B6429A0AA8706786905552D",
+    "csv_rows": 6780,
+    "valid_prediction_events": 6780,
+    "unique_images": 2621,
+    "bins": 96,
+    "proxy_mean_before_standardization": 39.999556814320385,
+    "proxy_std_before_standardization": 6.307152397762219,
+    "mapping_type": "image_id_order_proxy",
+    "valid_as_time_series": false
+  }
+}
