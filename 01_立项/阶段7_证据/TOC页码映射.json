@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-11-10T21:25:29+08:00",
+  "source_render": "report-render-v3",
+  "displayed_page_rule": "封面不计页码；目录显示第1页",
+  "entries": [
+    {
+      "heading": "一、研究背景与意义",
+      "anchor": "_Toc1685619136",
+      "page_number": 2
+    },
+    {
+      "heading": "1.1 研究背景",
+      "anchor": "_Toc596547528",
+      "page_number": 2
+    },
+    {
+      "heading": "1.2 研究意义与现状",
+      "anchor": "_Toc1720638900",
+      "page_number": 3
+    },
+    {
+      "heading": "二、模型介绍",
+      "anchor": "_Toc763201798",
+      "page_number": 4
+    },
+    {
+      "heading": "2.1 模型概述",
+      "anchor": "_Toc212795455",
+      "page_number": 4
+    },
+    {
+      "heading": "2.2 核心网络结构",
+      "anchor": "_Toc892939930",
+      "page_number": 4
+    },
+    {
+      "heading": "2.3 计算原理与损失函数",
+      "anchor": "_Toc1025678274",
+      "page_number": 5
+    },
+    {
+      "heading": "三、实验训练结果",
+      "anchor": "_Toc723516649",
+      "page_number": 5
+    },
+    {
+      "heading": "3.1 数据集与预处理",
+      "anchor": "_Toc1091910429",
+      "page_number": 5
+    },
+    {
+      "heading": "3.2 实验环境设置",
+      "anchor": "_Toc1490816588",
+      "page_number": 6
+    },
+    {
+      "heading": "3.3 实验结果与分析",
+      "anchor": "_Toc1462684967",
+      "page_number": 7
+    },
+    {
+      "heading": "四、模型改进与实验",
+      "anchor": "_Toc1100933160",
+      "page_number": 9
+    },
+    {
+      "heading": "4.1 模型改进创新",
+      "anchor": "_Toc664517568",
+      "page_number": 9
+    },
+    {
+      "heading": "4.2 改进创新实验结果",
+      "anchor": "_Toc1631800976",
+      "page_number": 9
+    },
+    {
+      "heading": "五、拓展实验内容",
+      "anchor": "_Toc165347795",
+      "page_number": 11
+    },
+    {
+      "heading": "5.1 新增内容介绍",
+      "anchor": "_Toc156551347",
+      "page_number": 11
+    },
+    {
+      "heading": "5.2 系统总体设计思路",
+      "anchor": "_Toc491021454",
+      "page_number": 11
+    },
+    {
+      "heading": "5.3 系统效果演示",
+      "anchor": "_Toc1965405604",
+      "page_number": 12
+    },
+    {
+      "heading": "六、实验总结与收获",
+      "anchor": "_Toc2126011921",
+      "page_number": 14
+    }
+  ]
+}

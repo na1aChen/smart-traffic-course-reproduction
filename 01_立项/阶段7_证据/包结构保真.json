@@ -1,0 +1,42 @@
+{
+  "reference_entry_count": 27,
+  "final_entry_count": 34,
+  "reference_file_count": 19,
+  "final_file_count": 26,
+  "added_files": [
+    "word/header2.xml",
+    "word/media/image3.png",
+    "word/media/image4.png",
+    "word/media/image5.png",
+    "word/media/image6.png",
+    "word/media/image7.png",
+    "word/media/image8.png"
+  ],
+  "removed_files": [],
+  "changed_files": [
+    "[Content_Types].xml",
+    "word/_rels/document.xml.rels",
+    "word/document.xml",
+    "word/settings.xml"
+  ],
+  "preserve_only_parts_unchanged": {
+    "_rels/.rels": true,
+    "customXml/_rels/item1.xml.rels": true,
+    "customXml/item1.xml": true,
+    "customXml/itemProps1.xml": true,
+    "docProps/app.xml": true,
+    "docProps/core.xml": true,
+    "docProps/custom.xml": true,
+    "word/fontTable.xml": true,
+    "word/footer1.xml": true,
+    "word/header1.xml": true,
+    "word/media/image1.png": true,
+    "word/media/image2.png": true,
+    "word/numbering.xml": true,
+    "word/styles.xml": true,
+    "word/theme/theme1.xml": true
+  },
+  "all_preserve_only_parts_unchanged": true,
+  "changed_files_within_expected": true,
+  "added_files_within_expected": true
+}

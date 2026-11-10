@@ -1,0 +1,110 @@
+{
+  "render_dir": "<LOCAL_USER>\\AppData\\Local\\Temp\\codex-stage7-report-20261110-01\\report-render-final3",
+  "page_count": 15,
+  "pages": [
+    {
+      "page": 1,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "9F9FA048997C4B92D791203740E68CA5B82B58F91CF47EC07C160B8843146E5A"
+    },
+    {
+      "page": 2,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "E8703B1C1D1AF954E13E5AC26DC1E2C660413DF6BC2C2405CD275CDF4442D393"
+    },
+    {
+      "page": 3,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "D4333615E3565997BB0D87C232B1217A06C54B40B3B95190C1DD2CDDBCB61A38"
+    },
+    {
+      "page": 4,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "51DD8B1CB3FCDB719419C261AF84A2BF1697DB4E79F0E36469241B307A5E55D4"
+    },
+    {
+      "page": 5,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "6B487C7018C8BF68110998344569CB6573647B936CCA43625E4C7352271422D4"
+    },
+    {
+      "page": 6,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "65CFC275CC1C58CEF9FA75D2057F900030634F5CFD7661FAD94FB1AC8F337794"
+    },
+    {
+      "page": 7,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "2C52B7922EDF299986F4C3F2C8A25FC70ACBE62D45CA8AD19749587FF602911B"
+    },
+    {
+      "page": 8,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "E408E34A4A0B22558981F1FECF24FA10790B6826EEC3AD876032B774281163F6"
+    },
+    {
+      "page": 9,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "12B68C69379F7BE5FD751067BF66F02F91F010F3B846F7DC4AC9B88C06A0C753"
+    },
+    {
+      "page": 10,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "74544085B78AF516033A3F7E317377D1203160CAB66DF27B1BBCBD5532E6D121"
+    },
+    {
+      "page": 11,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "65C5AE7B8D61FCAA94F1ACB622FFC17E095124FC5C7B7DCDEE407D61C2437A13"
+    },
+    {
+      "page": 12,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "583E20FC46F89ED4D708BE10CF051899B45A98EEF72E33E12388DAAB0EAB318A"
+    },
+    {
+      "page": 13,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "9E5D96A6EEE76DDC3AC563372B6E95969E4A01F714D231729D44E6148D97FE95"
+    },
+    {
+      "page": 14,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "855C509226F5CA9F47263A07C96B292AB8173F1609706B3EF18FCD021F1B337B"
+    },
+    {
+      "page": 15,
+      "width": 1414,
+      "height": 2000,
+      "sha256": "99C0E385E85AE0A039D132197562C1210C168C0F23B27CE68501D3B11BFA1218"
+    }
+  ],
+  "pdf_exists": true,
+  "first_page_long_top_rule_pixels": 0,
+  "cover_top_rule_absent": true,
+  "visual_review": {
+    "all_15_pages_inspected_at_fit_width": true,
+    "changed_pages_reinspected_after_final_edit": [
+      9
+    ],
+    "clipping_or_overlap_found": false,
+    "missing_glyph_found": false,
+    "table_break_defect_found": false,
+    "unexpected_blank_page_found": false,
+    "cover_unexpected_top_line_found": false
+  }
+}
