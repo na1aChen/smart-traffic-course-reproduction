@@ -1,0 +1,355 @@
+{
+  "updated_at": "2026-11-10T17:57:20+08:00",
+  "stage": 5,
+  "status": "passed",
+  "decision": {
+    "small_gain_reproduced": true,
+    "final_model": "BASELINE-001",
+    "p2_selected": false
+  },
+  "checks": {
+    "queue_complete": {
+      "name": "queue_complete",
+      "passed": true,
+      "detail": {
+        "started_at": "2026-11-09T14:54:25.1876782+08:00",
+        "updated_at": "2026-11-10T17:17:10.0151270+08:00",
+        "status": "passed",
+        "current_experiment": null,
+        "completed_experiments": [
+          "BASELINE-002-S2027",
+          "P2-002-S2027",
+          "BASELINE-BUDGET48-S2026"
+        ],
+        "total_experiments": 3,
+        "completed_count": 3,
+        "paused_at": "2026-11-09T23:15:02+08:00",
+        "pause_record": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\手动暂停记录.json",
+        "pause_checkpoint": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\train\\weights\\MANUAL_PAUSE_20261109_231429.pt",
+        "pause_checkpoint_sha256": "1988E208D5FE940EBF16E1EBE1F7DA8F2F03070020EE1C56D9D4C8FD0C457E20",
+        "completed_epoch_rows": 27
+      }
+    },
+    "all_new_experiments": {
+      "BASELINE-002-S2027": {
+        "name": "BASELINE-002-S2027_validation",
+        "passed": true,
+        "detail": {
+          "split": "val",
+          "test_inference_run": false
+        }
+      },
+      "P2-002-S2027": {
+        "name": "P2-002-S2027_validation",
+        "passed": true,
+        "detail": {
+          "split": "val",
+          "test_inference_run": false
+        }
+      },
+      "BASELINE-BUDGET48-S2026": {
+        "name": "BASELINE-BUDGET48-S2026_validation",
+        "passed": true,
+        "detail": {
+          "split": "val",
+          "test_inference_run": false
+        }
+      }
+    },
+    "two_seeds_per_family": {
+      "name": "two_seeds_per_family",
+      "passed": true,
+      "detail": {
+        "baseline_seeds": [
+          2026,
+          2027
+        ],
+        "p2_seeds": [
+          2026,
+          2027
+        ]
+      }
+    },
+    "small_gain_reproduced": {
+      "name": "small_gain_reproduced",
+      "passed": true,
+      "detail": [
+        {
+          "seed": 2026,
+          "delta_test_map50": -0.0012248967582421,
+          "delta_test_map50_95": -0.0031443921907643,
+          "delta_test_map_small": 0.0438126248024368
+        },
+        {
+          "seed": 2027,
+          "delta_test_map50": 0.0001944711079925,
+          "delta_test_map50_95": 5.443175046243587e-05,
+          "delta_test_map_small": 0.0378681778367506
+        }
+      ]
+    },
+    "budget_control_present": {
+      "name": "budget_control_present",
+      "passed": true,
+      "detail": {
+        "experiment_id": "BASELINE-BUDGET48-S2026",
+        "group": "budget",
+        "seed": 2026,
+        "epochs": 48,
+        "best_epoch": 47,
+        "val_map50": 0.52123,
+        "val_map50_95": 0.39827,
+        "val_map_small": 0.2891791200149759,
+        "test_map50": 0.510512939538263,
+        "test_map50_95": 0.3843585604979009,
+        "test_map_small": 0.222883466913402,
+        "test_map_medium": 0.4517351641567659,
+        "test_map_large": 0.5800882877672647,
+        "test_mar100": 0.7277133542377676,
+        "tp_at_0.25": 4419,
+        "confusion_at_0.25": 959,
+        "missed_at_0.25": 2322,
+        "background_fp_at_0.25": 414,
+        "duplicate_at_0.25": 795
+      }
+    },
+    "final_model_unchanged": {
+      "name": "final_model_unchanged",
+      "passed": true,
+      "detail": {
+        "final_model": "BASELINE-001"
+      }
+    },
+    "required_artifacts": {
+      "name": "required_artifacts",
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\阶段5预注册.md",
+      "exists": true,
+      "size_bytes": 3272,
+      "sha256": "CB1D4B40FFD2F2E76FFBAF3934F6C01D7EDA02C3253441181FD8761D7BB5F1C4"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\阶段5结果分析.md",
+      "exists": true,
+      "size_bytes": 4667,
+      "sha256": "C207C61543BD08BAEA59FA2F12EE13D8F55B6999F81844D22761FC606417D019"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\阶段5断电保护说明.md",
+      "exists": true,
+      "size_bytes": 1847,
+      "sha256": "DFA7771793A31A228CA83BB9AAD3CB80E9CFC4E9AC68717A2C3F45148BD60A17"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\手动暂停记录.json",
+      "exists": true,
+      "size_bytes": 623,
+      "sha256": "A5CDD7A5209021AE87A53D15205E2777EA20017EC286B94A695B8D10C33E3459"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\stage5_queue_status.json",
+      "exists": true,
+      "size_bytes": 814,
+      "sha256": "F145E64F559ED7DD6D04A72DF2E4092BF1A3C6F3C8EB40BD04BE870C72B648FD"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\stage5_comparison.json",
+      "exists": true,
+      "size_bytes": 7763,
+      "sha256": "4B51D288E31AA62D27798E45E978A136850EB4D2071627169D14B87C620F0B5D"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\stage5_experiment_metrics.csv",
+      "exists": true,
+      "size_bytes": 1279,
+      "sha256": "63F159EEDFA4A330B25E5D2F9850F9B3B1F31E0923A989CE4AE2EC6725006622"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\stage5_paired_deltas.csv",
+      "exists": true,
+      "size_bytes": 556,
+      "sha256": "A2F95220CC8D76B9FEF752FE8C5BAAE1C833B308E56B8417E97C3C3E5A6F0AB6"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\stage5_seed_comparison.png",
+      "exists": true,
+      "size_bytes": 48062,
+      "sha256": "EA9382E1C6C7915AD58FFB4A447EA5564CCAEF17EAD785D904A0D736FAC7813E"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段总结\\阶段5_总结.md",
+      "exists": true,
+      "size_bytes": 8424,
+      "sha256": "ED8CA70E7ACB0D223F6C783902A7D7AACC199D8C330E873445E74DAD30E872AB"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\training\\BASELINE-002-S2027.json",
+      "exists": true,
+      "size_bytes": 2721,
+      "sha256": "159CDB9624FD209AEE7B81664596C94E0968502841F679D7EE8321FAB5F79375"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\evaluation\\BASELINE-002-S2027.json",
+      "exists": true,
+      "size_bytes": 1640,
+      "sha256": "A1F2AFE3D5E6BBFF246B77FD71DF4B472EFA14B43A786B2D879875CE79121F40"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\validation\\BASELINE-002-S2027.json",
+      "exists": true,
+      "size_bytes": 1426,
+      "sha256": "4AA653E501A294F1886C7E48475DC0EDFDB8F46B7BCB07F4E78B75BEE915229D"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\test_eval\\metrics_yolov10.json",
+      "exists": true,
+      "size_bytes": 391,
+      "sha256": "5EDAF897654288C9CC4EEE1287DE44E93C66C233F8DE38A2519A227717E7F1FC"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\test_eval\\per_class_metrics.csv",
+      "exists": true,
+      "size_bytes": 3834,
+      "sha256": "69577E152B42845EB874AA603CCE4AE21995E85828E1453087CC6B3CCB0F290F"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\test_eval\\predictions_category0.json",
+      "exists": true,
+      "size_bytes": 50591811,
+      "sha256": "B0DDC17A5C89E236BD11E748F2A555E6B60491A917B2652435AC9F5CD3325C5F"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\test_eval\\confusion_matrix.png",
+      "exists": true,
+      "size_bytes": 224330,
+      "sha256": "62343F79CE753CD049857E2B1FC899B59CE504235E70B69474D25561E43CE4BB"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\train\\results.csv",
+      "exists": true,
+      "size_bytes": 19721,
+      "sha256": "E05798F26CD2F049FC94210EB83ADCA78F053F7D0D95C763C1D052E274CFC9E5"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\train\\weights\\best.pt",
+      "exists": true,
+      "size_bytes": 5820429,
+      "sha256": "06F645258D5B26720703F42F06EDD61D7D0B74463327FF14B564D6818BA1E282"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\training\\P2-002-S2027.json",
+      "exists": true,
+      "size_bytes": 1508,
+      "sha256": "48D7F507D747B0CAC0883A5615B5CEED234C1070A53CEA091F07A170DD1CEFFE"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\evaluation\\P2-002-S2027.json",
+      "exists": true,
+      "size_bytes": 1617,
+      "sha256": "6AA62322E5526DF69AEE167AD83C802126FFA7B2BF6B6399C5334A495E82BCB2"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\validation\\P2-002-S2027.json",
+      "exists": true,
+      "size_bytes": 1395,
+      "sha256": "96ECD648C72FA3411D697411EEE4FC11D21C199B8A34F6EC873A03F3F971A8D5"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\test_eval\\metrics_yolov10.json",
+      "exists": true,
+      "size_bytes": 393,
+      "sha256": "23D3EE3CBF3B5CB77613ACFCA4406DD0F1F830B57D8649D414164DC8F3042987"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\test_eval\\per_class_metrics.csv",
+      "exists": true,
+      "size_bytes": 3812,
+      "sha256": "3AB0774716402ABF39476E73EFF86BCF4084F3827A793714EA5C56C07CA89557"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\test_eval\\predictions_category0.json",
+      "exists": true,
+      "size_bytes": 50600492,
+      "sha256": "3771A9728079A9490CB8957F691BFBA9541295C204890BDDCF06BE90E3A46BE5"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\test_eval\\confusion_matrix.png",
+      "exists": true,
+      "size_bytes": 226954,
+      "sha256": "C1B6BD2212B2D5EEF5F1E4E2ADD02A1C2283FD2CABA7F7FB9CA7F7C5A139048E"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\train\\results.csv",
+      "exists": true,
+      "size_bytes": 19721,
+      "sha256": "3CBB83F5686E7C54A69F8B18CDF7FC38CE1E369ED4F54B7A5F86C2CAB00ACACF"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\train\\weights\\best.pt",
+      "exists": true,
+      "size_bytes": 6463741,
+      "sha256": "3C410CFA0875FFDDDB1CAD97F8C31092723C78B3040B7640A80945E28A8C12D4"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\training\\BASELINE-BUDGET48-S2026.json",
+      "exists": true,
+      "size_bytes": 2745,
+      "sha256": "F63E041447F8857FC6C6245B9BC8E8BBB4F99CE88D5248C18258A2E276C702AE"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\evaluation\\BASELINE-BUDGET48-S2026.json",
+      "exists": true,
+      "size_bytes": 1660,
+      "sha256": "4A3E8B79CC74C51EEC2152DBD5490BA65BFD547AFAA20215E954FFAA132C81D2"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\validation\\BASELINE-BUDGET48-S2026.json",
+      "exists": true,
+      "size_bytes": 1449,
+      "sha256": "6043C68446E9E15B56AF91F70515D55ED56C73EC3A376C05EAAF2AF7E0ED766E"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\test_eval\\metrics_yolov10.json",
+      "exists": true,
+      "size_bytes": 385,
+      "sha256": "BD3B08349BAD433CC79ACCCCEB0A4B39A92A08D48A85724456145A13D866969D"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\test_eval\\per_class_metrics.csv",
+      "exists": true,
+      "size_bytes": 3789,
+      "sha256": "692F168611CDD99A249FBB99E2A64E84952E8330FC1F5EF758DA5E38D4891F9F"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\test_eval\\predictions_category0.json",
+      "exists": true,
+      "size_bytes": 50535458,
+      "sha256": "9C5726FDA059744DEFC7C34D46B81DC8B6DC9A6F92924967941AB8DDCCF87648"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\test_eval\\confusion_matrix.png",
+      "exists": true,
+      "size_bytes": 224249,
+      "sha256": "569407A3407AAC0348A5E3FFC2EBD15342E2851D9E837AAE7B26380DBCCD60EB"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\train\\results.csv",
+      "exists": true,
+      "size_bytes": 23569,
+      "sha256": "886136B035A0DC53A98E400180CD45027445251CC2DD7BAE9FF8BD2C3774E311"
+    },
+    {
+      "path": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\train\\weights\\best.pt",
+      "exists": true,
+      "size_bytes": 5821773,
+      "sha256": "93B5CD8D456DD99780F1F0F4C9D7879EEF95F260E2548FC0A10901B835B69198"
+    }
+  ]
+}

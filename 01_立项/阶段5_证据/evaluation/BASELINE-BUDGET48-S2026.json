@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-11-10T17:11:26+08:00",
+  "experiment_id": "BASELINE-BUDGET48-S2026",
+  "status": "passed",
+  "checkpoint": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\train\\weights\\best.pt",
+  "split": "test",
+  "test_inference_run_count": 1,
+  "metrics_yolov10": {
+    "metrics/precision(B)": 0.4797402876806291,
+    "metrics/recall(B)": 0.5315671587016414,
+    "metrics/mAP50(B)": 0.5113972630094605,
+    "metrics/mAP50-95(B)": 0.3851629336728638,
+    "fitness": 0.3977863666065235,
+    "inference_ms_per_image": 4.139410405235079,
+    "preprocess_ms_per_image": 0.32184978759626504,
+    "postprocess_ms_per_image": 0.1911377138208,
+    "imgsz": 640.0
+  },
+  "recomputed_metrics": {
+    "ground_truth": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\test_eval\\ground_truth_coco.json",
+    "predictions_category0": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\test_eval\\predictions_category0.json",
+    "predictions_category1": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-BUDGET48-S2026\\test_eval\\predictions_category1.json",
+    "map50_95": 0.3843585604979009,
+    "map50": 0.510512939538263,
+    "map75": 0.4519121837319551,
+    "map_small": 0.22288346691340205,
+    "map_medium": 0.4517351641567659,
+    "map_large": 0.5800882877672647,
+    "mar100": 0.7277133542377676,
+    "images": 3071,
+    "categories": 45
+  },
+  "finished_at": "2026-11-10T17:17:09+08:00"
+}

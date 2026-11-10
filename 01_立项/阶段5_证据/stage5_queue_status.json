@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-09T14:54:25.1876782+08:00",
+  "updated_at": "2026-11-10T17:17:10.0151270+08:00",
+  "status": "passed",
+  "current_experiment": null,
+  "completed_experiments": [
+    "BASELINE-002-S2027",
+    "P2-002-S2027",
+    "BASELINE-BUDGET48-S2026"
+  ],
+  "total_experiments": 3,
+  "completed_count": 3,
+  "paused_at": "2026-11-09T23:15:02+08:00",
+  "pause_record": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\手动暂停记录.json",
+  "pause_checkpoint": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\train\\weights\\MANUAL_PAUSE_20261109_231429.pt",
+  "pause_checkpoint_sha256": "1988E208D5FE940EBF16E1EBE1F7DA8F2F03070020EE1C56D9D4C8FD0C457E20",
+  "completed_epoch_rows": 27
+}

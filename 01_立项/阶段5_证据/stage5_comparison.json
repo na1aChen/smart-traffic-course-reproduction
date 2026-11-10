@@ -1,0 +1,245 @@
+{
+  "created_at": "2026-11-10T17:52:02+08:00",
+  "purpose": "Stage 5 multi-seed and training-budget robustness audit",
+  "operational_confidence": 0.25,
+  "experiments": [
+    {
+      "experiment_id": "BASELINE-001",
+      "group": "baseline",
+      "seed": 2026,
+      "epochs": 40,
+      "best_epoch": 39,
+      "val_map50": 0.52162,
+      "val_map50_95": 0.4,
+      "val_map_small": 0.24762529210348005,
+      "test_map50": 0.5005196908838662,
+      "test_map50_95": 0.37580210274270254,
+      "test_map_small": 0.21251967358424584,
+      "test_map_medium": 0.44335702557011347,
+      "test_map_large": 0.5584415505465079,
+      "test_mar100": 0.7224763013248783,
+      "tp_at_0.25": 4440,
+      "confusion_at_0.25": 930,
+      "missed_at_0.25": 2325,
+      "background_fp_at_0.25": 441,
+      "duplicate_at_0.25": 969
+    },
+    {
+      "experiment_id": "P2-001",
+      "group": "p2",
+      "seed": 2026,
+      "epochs": 40,
+      "best_epoch": 38,
+      "val_map50": 0.50865,
+      "val_map50_95": 0.38725,
+      "val_map_small": 0.2893968073725422,
+      "test_map50": 0.499294794125624,
+      "test_map50_95": 0.3726577105519382,
+      "test_map_small": 0.2563322983866827,
+      "test_map_medium": 0.4385322943660057,
+      "test_map_large": 0.46715976028832984,
+      "test_mar100": 0.7590362650913622,
+      "tp_at_0.25": 4679,
+      "confusion_at_0.25": 1041,
+      "missed_at_0.25": 1986,
+      "background_fp_at_0.25": 544,
+      "duplicate_at_0.25": 1018
+    },
+    {
+      "experiment_id": "BASELINE-002-S2027",
+      "group": "baseline",
+      "seed": 2027,
+      "epochs": 40,
+      "best_epoch": 39,
+      "val_map50": 0.51657,
+      "val_map50_95": 0.39618,
+      "val_map_small": 0.27942511935108866,
+      "test_map50": 0.4942701740885437,
+      "test_map50_95": 0.371632405586249,
+      "test_map_small": 0.2140465272075253,
+      "test_map_medium": 0.4426272612539072,
+      "test_map_large": 0.5508589128606985,
+      "test_mar100": 0.7234913106839991,
+      "tp_at_0.25": 4289,
+      "confusion_at_0.25": 933,
+      "missed_at_0.25": 2478,
+      "background_fp_at_0.25": 450,
+      "duplicate_at_0.25": 789
+    },
+    {
+      "experiment_id": "P2-002-S2027",
+      "group": "p2",
+      "seed": 2027,
+      "epochs": 40,
+      "best_epoch": 39,
+      "val_map50": 0.50557,
+      "val_map50_95": 0.39009,
+      "val_map_small": 0.31247768094718603,
+      "test_map50": 0.4944646451965362,
+      "test_map50_95": 0.37168683733671143,
+      "test_map_small": 0.25191470504427593,
+      "test_map_medium": 0.43246841817015597,
+      "test_map_large": 0.4749181438419849,
+      "test_mar100": 0.7577735785931153,
+      "tp_at_0.25": 4533,
+      "confusion_at_0.25": 982,
+      "missed_at_0.25": 2190,
+      "background_fp_at_0.25": 452,
+      "duplicate_at_0.25": 862
+    },
+    {
+      "experiment_id": "BASELINE-BUDGET48-S2026",
+      "group": "budget",
+      "seed": 2026,
+      "epochs": 48,
+      "best_epoch": 47,
+      "val_map50": 0.52123,
+      "val_map50_95": 0.39827,
+      "val_map_small": 0.2891791200149759,
+      "test_map50": 0.510512939538263,
+      "test_map50_95": 0.3843585604979009,
+      "test_map_small": 0.22288346691340205,
+      "test_map_medium": 0.4517351641567659,
+      "test_map_large": 0.5800882877672647,
+      "test_mar100": 0.7277133542377676,
+      "tp_at_0.25": 4419,
+      "confusion_at_0.25": 959,
+      "missed_at_0.25": 2322,
+      "background_fp_at_0.25": 414,
+      "duplicate_at_0.25": 795
+    }
+  ],
+  "groups": {
+    "baseline": {
+      "val_map50_95": {
+        "mean": 0.39809,
+        "std": 0.002701147904132644,
+        "min": 0.39618,
+        "max": 0.4,
+        "n": 2
+      },
+      "val_map_small": {
+        "mean": 0.26352520572728433,
+        "std": 0.02248587348734479,
+        "min": 0.24762529210348005,
+        "max": 0.27942511935108866,
+        "n": 2
+      },
+      "test_map50": {
+        "mean": 0.4973949324862049,
+        "std": 0.00441907570511175,
+        "min": 0.4942701740885437,
+        "max": 0.5005196908838662,
+        "n": 2
+      },
+      "test_map50_95": {
+        "mean": 0.37371725416447577,
+        "std": 0.002948421134822566,
+        "min": 0.371632405586249,
+        "max": 0.37580210274270254,
+        "n": 2
+      },
+      "test_map_small": {
+        "mean": 0.21328310039588555,
+        "std": 0.0010796485509001498,
+        "min": 0.21251967358424584,
+        "max": 0.2140465272075253,
+        "n": 2
+      }
+    },
+    "p2": {
+      "val_map50_95": {
+        "mean": 0.38866999999999996,
+        "std": 0.0020081832585698016,
+        "min": 0.38725,
+        "max": 0.39009,
+        "n": 2
+      },
+      "val_map_small": {
+        "mean": 0.3009372441598641,
+        "std": 0.016320642220340045,
+        "min": 0.2893968073725422,
+        "max": 0.31247768094718603,
+        "n": 2
+      },
+      "test_map50": {
+        "mean": 0.49687971966108013,
+        "std": 0.0034154310618989135,
+        "min": 0.4944646451965362,
+        "max": 0.499294794125624,
+        "n": 2
+      },
+      "test_map50_95": {
+        "mean": 0.37217227394432484,
+        "std": 0.0006865110341592313,
+        "min": 0.37168683733671143,
+        "max": 0.3726577105519382,
+        "n": 2
+      },
+      "test_map_small": {
+        "mean": 0.2541235017154793,
+        "std": 0.003123710208940371,
+        "min": 0.25191470504427593,
+        "max": 0.2563322983866827,
+        "n": 2
+      }
+    }
+  },
+  "paired_deltas": [
+    {
+      "seed": 2026,
+      "test_map50_baseline": 0.5005196908838662,
+      "test_map50_95_baseline": 0.37580210274270254,
+      "test_map_small_baseline": 0.21251967358424584,
+      "test_map50_p2": 0.499294794125624,
+      "test_map50_95_p2": 0.3726577105519382,
+      "test_map_small_p2": 0.2563322983866827,
+      "delta_test_map50": -0.0012248967582421666,
+      "delta_test_map50_95": -0.0031443921907643446,
+      "delta_test_map_small": 0.04381262480243686
+    },
+    {
+      "seed": 2027,
+      "test_map50_baseline": 0.4942701740885437,
+      "test_map50_95_baseline": 0.371632405586249,
+      "test_map_small_baseline": 0.2140465272075253,
+      "test_map50_p2": 0.4944646451965362,
+      "test_map50_95_p2": 0.37168683733671143,
+      "test_map_small_p2": 0.25191470504427593,
+      "delta_test_map50": 0.0001944711079925332,
+      "delta_test_map50_95": 5.443175046243587e-05,
+      "delta_test_map_small": 0.037868177836750644
+    }
+  ],
+  "budget_control": {
+    "experiment_id": "BASELINE-BUDGET48-S2026",
+    "group": "budget",
+    "seed": 2026,
+    "epochs": 48,
+    "best_epoch": 47,
+    "val_map50": 0.52123,
+    "val_map50_95": 0.39827,
+    "val_map_small": 0.2891791200149759,
+    "test_map50": 0.510512939538263,
+    "test_map50_95": 0.3843585604979009,
+    "test_map_small": 0.22288346691340205,
+    "test_map_medium": 0.4517351641567659,
+    "test_map_large": 0.5800882877672647,
+    "test_mar100": 0.7277133542377676,
+    "tp_at_0.25": 4419,
+    "confusion_at_0.25": 959,
+    "missed_at_0.25": 2322,
+    "background_fp_at_0.25": 414,
+    "duplicate_at_0.25": 795
+  },
+  "interpretation": {
+    "small_gain_reproduced_on_test": true,
+    "p2_overall_mean_delta_map50": -0.0005152128251247889,
+    "p2_overall_mean_delta_map50_95": -0.0015449802201509266,
+    "p2_small_mean_delta_map50_95": 0.040840401319593767,
+    "budget48_map_small": 0.22288346691340205,
+    "budget48_map50_95": 0.3843585604979009,
+    "final_model": "BASELINE-001"
+  },
+  "figure": "<PROJECT_ROOT>\\01_立项\\阶段5_证据\\stage5_seed_comparison.png"
+}

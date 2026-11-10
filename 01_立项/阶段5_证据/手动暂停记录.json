@@ -1,0 +1,10 @@
+{
+  "experiment": "P2-002-S2027",
+  "selected_source": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\train\\weights\\last.pt",
+  "snapshot": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\train\\weights\\MANUAL_PAUSE_20261109_231429.pt",
+  "source_sha256": "1988E208D5FE940EBF16E1EBE1F7DA8F2F03070020EE1C56D9D4C8FD0C457E20",
+  "snapshot_sha256": "1988E208D5FE940EBF16E1EBE1F7DA8F2F03070020EE1C56D9D4C8FD0C457E20",
+  "rejected": [],
+  "created_at": "2026-11-09T23:14:29+08:00",
+  "completed_epoch_rows": 27
+}

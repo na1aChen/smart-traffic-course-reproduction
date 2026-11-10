@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-11-09T14:54:30+08:00",
+  "experiment_id": "BASELINE-002-S2027",
+  "config": "<PROJECT_ROOT>\\03_实验\\configs\\BASELINE-002.yaml",
+  "variant": "baseline",
+  "status": "passed",
+  "test_inference_run": false,
+  "weight_transfer": {
+    "source_tensor_count": 595,
+    "target_tensor_count": 595,
+    "matched_tensor_count": 493,
+    "matched_parameter_count": 2637279,
+    "unmatched_target_tensor_count": 102,
+    "unmatched_target_examples": [
+      "model.23.cv3.0.0.1.conv.weight",
+      "model.23.cv3.0.0.1.bn.weight",
+      "model.23.cv3.0.0.1.bn.bias",
+      "model.23.cv3.0.0.1.bn.running_mean",
+      "model.23.cv3.0.0.1.bn.running_var",
+      "model.23.cv3.0.1.0.conv.weight",
+      "model.23.cv3.0.1.0.bn.weight",
+      "model.23.cv3.0.1.0.bn.bias",
+      "model.23.cv3.0.1.0.bn.running_mean",
+      "model.23.cv3.0.1.0.bn.running_var",
+      "model.23.cv3.0.1.1.conv.weight",
+      "model.23.cv3.0.1.1.bn.weight",
+      "model.23.cv3.0.1.1.bn.bias",
+      "model.23.cv3.0.1.1.bn.running_mean",
+      "model.23.cv3.0.1.1.bn.running_var",
+      "model.23.cv3.0.2.weight",
+      "model.23.cv3.0.2.bias",
+      "model.23.cv3.1.0.1.conv.weight",
+      "model.23.cv3.1.0.1.bn.weight",
+      "model.23.cv3.1.0.1.bn.bias"
+    ],
+    "unmatched_target_modules": {
+      "model.23.cv3": 51,
+      "model.23.one2one_cv3": 51
+    },
+    "loaded_with": "Model.load(path)"
+  },
+  "model": {
+    "parameters": 2724590,
+    "flops_gflops_at_imgsz": null,
+    "flops_error": "ValueError: get_flops returned non-positive value: 0.0"
+  },
+  "max_memory_allocated_bytes": 1521891840,
+  "max_memory_reserved_bytes": 2038431744,
+  "train_batches": 27480,
+  "train_epoch_seconds": 385.7196494000018,
+  "train_dataset_images": 5489,
+  "train_started_perf_counter": 19465.2248796,
+  "train_images_per_second": 14.23054285291999,
+  "completed_epochs": 40,
+  "best_epoch": 39,
+  "best_validation": {
+    "precision": 0.49328,
+    "recall": 0.51425,
+    "map50": 0.51657,
+    "map50_95": 0.39618
+  },
+  "losses_finite": true,
+  "results_csv": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\train\\results.csv",
+  "best_checkpoint": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\train\\weights\\best.pt",
+  "last_checkpoint": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\train\\weights\\last.pt",
+  "peak_memory_allocated_gib": 1.4174,
+  "peak_memory_reserved_gib": 1.8984,
+  "finished_at": "2026-11-09T19:44:08+08:00"
+}
