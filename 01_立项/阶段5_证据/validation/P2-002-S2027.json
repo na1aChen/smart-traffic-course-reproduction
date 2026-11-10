@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-11-10T17:48:13+08:00",
+  "experiment_id": "P2-002-S2027",
+  "status": "passed",
+  "split": "val",
+  "checkpoint": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\train\\weights\\best.pt",
+  "test_inference_run": false,
+  "metrics_yolov10": {
+    "metrics/precision(B)": 0.5672726562464848,
+    "metrics/recall(B)": 0.49108187704804684,
+    "metrics/mAP50(B)": 0.5056709179478289,
+    "metrics/mAP50-95(B)": 0.39054457973923135,
+    "fitness": 0.4020572135600911
+  },
+  "recomputed_metrics": {
+    "ground_truth": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\val_eval_diag\\ground_truth_coco.json",
+    "predictions_category0": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\val_eval_diag\\predictions_category0.json",
+    "predictions_category1": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\val_eval_diag\\predictions_category1.json",
+    "map50_95": 0.3903858738992514,
+    "map50": 0.5057934434606168,
+    "map75": 0.4602157542472237,
+    "map_small": 0.31247768094718603,
+    "map_medium": 0.4585783093597483,
+    "map_large": 0.6066559360356173,
+    "mar100": 0.7759462638342551,
+    "images": 610,
+    "categories": 45
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-11-10T10:37:55+08:00",
+  "experiment_id": "P2-002-S2027",
+  "status": "passed",
+  "checkpoint": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\train\\weights\\best.pt",
+  "split": "test",
+  "test_inference_run_count": 1,
+  "metrics_yolov10": {
+    "metrics/precision(B)": 0.48152332364591105,
+    "metrics/recall(B)": 0.5176690539301223,
+    "metrics/mAP50(B)": 0.49488986350408093,
+    "metrics/mAP50-95(B)": 0.37220484807957815,
+    "fitness": 0.38447334962202845,
+    "inference_ms_per_image": 12.286124265143476,
+    "preprocess_ms_per_image": 0.3242918894602242,
+    "postprocess_ms_per_image": 0.21976595474586003,
+    "imgsz": 640.0
+  },
+  "recomputed_metrics": {
+    "ground_truth": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\test_eval\\ground_truth_coco.json",
+    "predictions_category0": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\test_eval\\predictions_category0.json",
+    "predictions_category1": "<PROJECT_ROOT>\\03_实验\\robustness\\P2-002-S2027\\test_eval\\predictions_category1.json",
+    "map50_95": 0.37168683733671143,
+    "map50": 0.4944646451965362,
+    "map75": 0.44269035384852296,
+    "map_small": 0.25191470504427593,
+    "map_medium": 0.43246841817015597,
+    "map_large": 0.4749181438419849,
+    "mar100": 0.7577735785931153,
+    "images": 3071,
+    "categories": 45
+  },
+  "finished_at": "2026-11-10T10:43:44+08:00"
+}

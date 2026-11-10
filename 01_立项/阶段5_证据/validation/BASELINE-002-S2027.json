@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-11-10T17:46:55+08:00",
+  "experiment_id": "BASELINE-002-S2027",
+  "status": "passed",
+  "split": "val",
+  "checkpoint": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\train\\weights\\best.pt",
+  "test_inference_run": false,
+  "metrics_yolov10": {
+    "metrics/precision(B)": 0.4930184116694072,
+    "metrics/recall(B)": 0.5136909737556886,
+    "metrics/mAP50(B)": 0.5167192519187555,
+    "metrics/mAP50-95(B)": 0.39686466499686934,
+    "fitness": 0.40885012368905793
+  },
+  "recomputed_metrics": {
+    "ground_truth": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\val_eval_diag\\ground_truth_coco.json",
+    "predictions_category0": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\val_eval_diag\\predictions_category0.json",
+    "predictions_category1": "<PROJECT_ROOT>\\03_实验\\robustness\\BASELINE-002-S2027\\val_eval_diag\\predictions_category1.json",
+    "map50_95": 0.3968688822523754,
+    "map50": 0.5169564247564181,
+    "map75": 0.46578402813064124,
+    "map_small": 0.27942511935108866,
+    "map_medium": 0.4811477578459861,
+    "map_large": 0.6957719241296829,
+    "mar100": 0.7303284297118433,
+    "images": 610,
+    "categories": 45
+  }
+}
