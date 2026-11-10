@@ -1,0 +1,97 @@
+{
+  "freeze_version": "stage6-evidence-v1.0.0",
+  "generated_at": "2026-11-10T20:03:38+08:00",
+  "stage": "6",
+  "stage_name": "证据冻结",
+  "stage5s_baseline_commit": "f8b736b",
+  "stage5s_tag": "stage-5s-complete",
+  "main_model": "BASELINE-001",
+  "registry_ids": [
+    "BASE_YOLOV10N_TT100K45_S2026",
+    "P2-001",
+    "BASELINE-002-S2027",
+    "P2-002-S2027",
+    "BASELINE-BUDGET48-S2026",
+    "SYS5S-001"
+  ],
+  "canonical_experiment_ids": [
+    "BASELINE-001",
+    "P2-001",
+    "BASELINE-002-S2027",
+    "P2-002-S2027",
+    "BASELINE-BUDGET48-S2026",
+    "SYS5S-001"
+  ],
+  "canonical_detection_metrics_source": "01_立项/阶段5_证据/stage5_experiment_metrics.csv",
+  "canonical_system_metrics_source": "01_立项/阶段5S_证据/forecast_result.json",
+  "test_policy": {
+    "detector_test_inference_per_model": 1,
+    "stage6_retraining": false,
+    "stage6_test_inference": false,
+    "stage6_weight_or_checkpoint_modification": false,
+    "stage5s_reevaluation": false
+  },
+  "loss_policy": {
+    "training_loss_source": "results.csv:train/*",
+    "validation_loss_source": "results.csv:val/*",
+    "test_loss_status": "未由现有检测测试流程生成或持久化",
+    "zero_ms_loss_meaning": "控制台中的 loss 计时为0.0ms，不是损失数值。"
+  },
+  "excluded_inputs": [
+    {
+      "path": "03_实验/数据/原始/tt100k_2021.zip.partial-unverified",
+      "reason": "未验证的旧 partial 下载，不参与阶段6冻结。"
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "FIG-1",
+      "filename": "fig1_detection_main_results.png",
+      "title": "检测主结果：总体与小目标测试AP",
+      "report_use": "主结果图；基线两seed、P2两seed与48轮预算对照同图，不做跨域比较。",
+      "data_sources": "01_立项/阶段5_证据/stage5_experiment_metrics.csv;01_立项/阶段5_证据/stage5_comparison.json",
+      "path": "01_立项/阶段6_证据/主图/fig1_detection_main_results.png",
+      "sha256": "2FFC3F5DCBE6484987D6253CD70664AC28B579A77012C3FE5C8B30BBF7778B36",
+      "width_px": "1779",
+      "height_px": "1021",
+      "regeneration_command": "02_代码\\环境\\venv\\Scripts\\python.exe 02_代码\\阶段6\\build_stage6_freeze.py --figures-only"
+    },
+    {
+      "figure_id": "FIG-2",
+      "filename": "fig2_baseline_training_validation_losses.png",
+      "title": "BASELINE-001训练与验证损失",
+      "report_use": "训练过程图；明确标注不含测试损失。",
+      "data_sources": "03_实验/baseline_yolov10n/train/results.csv",
+      "path": "01_立项/阶段6_证据/主图/fig2_baseline_training_validation_losses.png",
+      "sha256": "21BC45BCDC2FDAD2A6C4B59B274BD89B2AF41E6F199FCE95BC35125E2F79840C",
+      "width_px": "2859",
+      "height_px": "850",
+      "regeneration_command": "02_代码\\环境\\venv\\Scripts\\python.exe 02_代码\\阶段6\\build_stage6_freeze.py --figures-only"
+    },
+    {
+      "figure_id": "FIG-3",
+      "filename": "fig3_test_size_bucket_ap.png",
+      "title": "测试集COCO尺寸分桶AP",
+      "report_use": "小目标机制与总体权衡图。",
+      "data_sources": "01_立项/阶段5_证据/stage5_experiment_metrics.csv",
+      "path": "01_立项/阶段6_证据/主图/fig3_test_size_bucket_ap.png",
+      "sha256": "94ABA9EE3A264E05E648B6592FE527B287A7792267B6DFFB776263428BBDC3E2",
+      "width_px": "1599",
+      "height_px": "950",
+      "regeneration_command": "02_代码\\环境\\venv\\Scripts\\python.exe 02_代码\\阶段6\\build_stage6_freeze.py --figures-only"
+    },
+    {
+      "figure_id": "FIG-4",
+      "filename": "fig4_sys5s_cascade_difference.png",
+      "title": "SYS5S-001单窗口预测绝对差",
+      "report_use": "模块级联接证据；禁止写成端到端精度或性能提升。",
+      "data_sources": "01_立项/阶段5S_证据/cascade_predictions.npz",
+      "path": "01_立项/阶段6_证据/主图/fig4_sys5s_cascade_difference.png",
+      "sha256": "F508F09D42AB13822F6AF399FEA4AAAF9FE6698AEB0EE7A07B511FAD1F278B73",
+      "width_px": "1660",
+      "height_px": "947",
+      "regeneration_command": "02_代码\\环境\\venv\\Scripts\\python.exe 02_代码\\阶段6\\build_stage6_freeze.py --figures-only"
+    }
+  ],
+  "comparison_boundary": "检测mAP与SYS5S流量MSE/MAE分域保存；SYS5S只证明离线模块接口与数据流，不是端到端性能。"
+}

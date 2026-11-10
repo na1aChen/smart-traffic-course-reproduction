@@ -1,0 +1,10 @@
+﻿metric_id,domain,split,experiment_or_group,numerator,denominator,value_fraction,report_display,unit,comparison_object,statement,source_path
+DIAG_TEST_SMALL_GT_SHARE,object_detection,test,BASELINE-001,3302,7706,0.428497274851,42.8497%,percent,"全部7,706个测试GT框",测试集小目标的真实框占比为42.8497%。,03_实验/诊断/BASELINE-001/analysis/analysis_summary.json
+DIAG_TEST_SMALL_MISS_SHARE,object_detection,test,BASELINE-001,1634,2325,0.702795698925,70.2796%,percent,"全部2,325个测试漏检",测试集漏检中有70.2796%来自小目标。,03_实验/诊断/BASELINE-001/analysis/analysis_summary.json
+DIAG_VAL_SMALL_GT_SHARE,object_detection,val,BASELINE-001,720,1553,0.463618802318,46.3619%,percent,"全部1,553个验证GT框",验证集小目标的真实框占比为46.3619%。,03_实验/诊断/BASELINE-001/analysis/analysis_summary.json
+DIAG_VAL_SMALL_MISS_SHARE,object_detection,val,BASELINE-001,361,479,0.753653444676,75.3653%,percent,全部479个验证漏检,验证集漏检中有75.3653%来自小目标。,03_实验/诊断/BASELINE-001/analysis/analysis_summary.json
+P2_SMALL_AP_GAIN_PP_S2026,object_detection,test,P2-001 vs BASELINE-001,0.0438126248024,1,0.0438126248024,0.043813 十进制度量点,decimal_metric_point,同seed P2减去对应基线,seed 2026 的测试small mAP50-95提高0.043813（即4.3813个百分点）。,01_立项/阶段5_证据/stage5_comparison.json
+P2_SMALL_AP_GAIN_PP_S2027,object_detection,test,P2-002-S2027 vs BASELINE-002-S2027,0.0378681778368,1,0.0378681778368,0.037868 十进制度量点,decimal_metric_point,同seed P2减去对应基线,seed 2027 的测试small mAP50-95提高0.037868（即3.7868个百分点）。,01_立项/阶段5_证据/stage5_comparison.json
+P2_SMALL_AP_MEAN_GAIN_PP_N2,object_detection,test,P2 two-seed mean,0.0816808026392,2,0.0408404013196,0.040840 十进制度量点,decimal_metric_point,两个配对seed的P2减基线差值均值,P2相对配对基线的small mAP50-95平均提高0.040840（即4.0840个百分点，n=2）。,01_立项/阶段5_证据/stage5_comparison.json
+P2_LATENCY_RATIO_S2026,object_detection,test,P2-001 / BASELINE-001,12.180597,4.2,2.90014214286,2.900142 ratio,ratio,BASELINE-001单图推理时延4.2 ms,P2-001单图推理时延约为基线的2.900142倍。,03_实验/实验总表.csv
+SYS5S_REL_MEAN_ABS_PREDICTION_DELTA,flow_forecasting,single_window_diagnostic,SYS5S-001,0.0174229804833,1.18350231648,0.0147215432034,1.4722%,percent,注入前预测绝对值的均值,单窗口注入造成相对平均绝对预测差1.4722%，只作接口传播证据。,01_立项/阶段5S_证据/forecast_result.json

@@ -1,0 +1,2 @@
+﻿freeze_version,change_id,change_type,numbers_changed,reason,evidence,review_status
+stage6-evidence-v1.0.0,FREEZE-000,initial_freeze,否,首次建立阶段6统一数字来源，未修改既有实验结果。,01_立项/阶段6_证据/最终主表.csv,approved_by_stage6_audit
