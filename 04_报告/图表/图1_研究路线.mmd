@@ -1,0 +1,32 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Microsoft YaHei, Arial, sans-serif","primaryTextColor":"#1F2937","lineColor":"#64748B"}}}%%
+flowchart TB
+    subgraph EVIDENCE["证据建立"]
+        direction LR
+        A["01数据与来源锁版<br/>TT100K-45类/YOLOv10"] --> B["02基线复现<br/>BASELINE-001"]
+        B --> C["03错误诊断<br/>尺寸/类别/工作点"]
+    end
+
+    subgraph VALIDATION["验证与边界"]
+        direction LR
+        D["04P2单因子<br/>小目标高分辨率分支"] --> E["05稳健性验证<br/>两seed/48轮预算"]
+        E --> F["06-5S离线联调<br/>检测结果到流量预测"]
+    end
+
+    C --> D
+
+    classDef data fill:#EAF2F8,stroke:#4A6FA5,stroke-width:1.5px,color:#1F2937
+    classDef baseline fill:#EDF7ED,stroke:#4F8A5B,stroke-width:1.5px,color:#1F2937
+    classDef diagnosis fill:#FFF4D6,stroke:#B68A2E,stroke-width:1.5px,color:#1F2937
+    classDef improve fill:#FCE8E6,stroke:#B85450,stroke-width:1.5px,color:#1F2937
+    classDef robust fill:#F4ECF7,stroke:#8E6A9E,stroke-width:1.5px,color:#1F2937
+    classDef system fill:#E8F5E9,stroke:#4F8A5B,stroke-width:1.5px,color:#1F2937
+
+    class A data
+    class B baseline
+    class C diagnosis
+    class D improve
+    class E robust
+    class F system
+
+    style EVIDENCE fill:#FAFAF9,stroke:#CBD5E1,stroke-width:1px
+    style VALIDATION fill:#FAFAF9,stroke:#CBD5E1,stroke-width:1px

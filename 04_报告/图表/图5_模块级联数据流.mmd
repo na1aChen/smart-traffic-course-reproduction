@@ -1,0 +1,22 @@
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Microsoft YaHei, Arial, sans-serif","primaryTextColor":"#1F2937","lineColor":"#64748B"}}}%%
+flowchart TB
+    A["检测结果<br/>类别/置信度/检测框"] --> B["适配器<br/>按image_id顺序等频分箱<br/>累计置信度并标准化"]
+    B --> C["固定输入<br/>96×170"]
+    C --> D["TA-iTransformer<br/>严格加载既有checkpoint"]
+    D --> E["预测输出<br/>96×170"]
+
+    B -.->|边界字段| N["valid_as_time_series=false<br/>图像ID顺序不代表真实时间"]
+    N -.->|适用范围| O["仅验证接口、数据流与可复现性"]
+
+    classDef detection fill:#EAF2F8,stroke:#4A6FA5,stroke-width:1.5px,color:#1F2937
+    classDef adapter fill:#F4F6F7,stroke:#6B7280,stroke-width:1.5px,color:#1F2937
+    classDef model fill:#F4ECF7,stroke:#8E6A9E,stroke-width:1.5px,color:#1F2937
+    classDef output fill:#E8F5E9,stroke:#4F8A5B,stroke-width:1.5px,color:#1F2937
+    classDef boundary fill:#FDEDEC,stroke:#B85450,stroke-width:1.5px,color:#7F1D1D
+
+    class A detection
+    class B adapter
+    class C adapter
+    class D model
+    class E output
+    class N,O boundary
